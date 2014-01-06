@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Byte 1 Tutoral</title>
+</head>
+<body>
+<h1>Data Pipeline Project Byte 1 Example</h1>
+<form action="search" method="POST">
+  Search Term: <input name="search_term" value={{search}}><br>
+  <input type="submit" value="Enter Search Term">
+</form>
+{% if search: %}
+<p>Searching for {{search}}</p>
+{% endif %}
+
+<h2>Feed Contents</h2>
+{% for item in feed %}
+<a href="{{ item.link }}">{{ item.title }}</a><br>
+{{item.description|safe}}
+<br>
+{% endfor %}
+
+</body>
+</html>
