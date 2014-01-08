@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Data Pipeline Project Byte 2 -- Twitter
+</title>
+</head>
+<body>
+<h1>Data Pipeline Project Byte 2 -- Twitter</h1>
+
+<form action="/" method="POST">
+  Search Term: <input name="search_term"><br>
+  <input type="submit" value="Enter Search Term">
+</form>
+
+
+{% if results: %}
+<hr>
+{% for row in rows %}
+  <ul>
+    <li>{{ row[0]|e }} at {{ row[1]|e }}</li>
+  </ul>
+  <hr>
+{% endfor %}
+{% endif %}
+</body>
+</html>
