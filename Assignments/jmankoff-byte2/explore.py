@@ -7,10 +7,10 @@ import csv
 
 
 # This API key is provided by google as described in the tutorial
-API_KEY = 'AIzaSyCpZ1iLD_Id7epHtnkEgAYTXsk2uBUtGkk'
+API_KEY = ''
 
 # This is the table id for the fusion table
-TABLE_ID = '1ymz3EtGdi4qKGMl5AxEFXtTlgk3tKi8iCpjTzvM'
+TABLE_ID = ''
 
 # open the data stored in a file called "data.json"
 try:
