@@ -1,16 +1,15 @@
-import numpy
 import httplib2
 from apiclient.discovery import build
 import urllib
 import json
 import csv
-
+import matplotlib.pyplot as plt 
 
 # This API key is provided by google as described in the tutorial
-API_KEY = ''
+API_KEY = '... add your own ...'
 
 # This is the table id for the fusion table
-TABLE_ID = ''
+TABLE_ID = '... add your own ...'
 
 # open the data stored in a file called "data.json"
 try:
@@ -103,11 +102,9 @@ writer.writerow(headers)
 for column_name, details in summary.iteritems():
     # rowcounts is a list containing the numrows numbers, but 
     # no column value names
-    # numpy.array is an array that we can use to easily calculate
-    # some statistics on those counts including max, and min
-    rowcounts = numpy.array(details.values())
-    max = numpy.amax(rowcounts)
-    min = numpy.amin(rowcounts)
+    rowcounts = details.values()
+    max_count = max(rowcounts)
+    min_count = min(rowcounts)
 
     # we also want to know specifically how many rows had no
     # entry for this column
@@ -129,7 +126,7 @@ for column_name, details in summary.iteritems():
 
 
     # as a second sanity check, let's write this out to a csv summary file
-    row = {"name": column_name, "max": max, "min": min, "empty": emptyrowcounts, 
+    row = {"name": column_name, "max": max_count, "min": min_count, "empty": emptyrowcounts, 
            "unique":unique}
     dict_writer.writerow(row)
 
@@ -144,5 +141,80 @@ for column_name, details in summary.iteritems():
         kdict_writer.writerow({"name":column_value, "amount":numrows})
 
 
+# some of the data is numeric -- especially the latituted, longitude,
+# zipfound, and zipplaced. You might also explore the data
+# about, for example, month found/placed numerically (are some months
+# likely to have more strays or placements than others?). You could
+# even parse the date data and look at for example the impact of 
+# day of week. The code below shows some ways of visualizing 
+# latitude and longitude only. 
+    
+latitude = summary['Latitude']
 
+# need to replace the "EMPTY" key with a numeric value for plotting
+latitude[0] = latitude['EMPTY']
+del latitude['EMPTY']
+
+# make a bar plot of all the latitudes we found
+plt.bar(latitude.keys(), latitude.values())
+plt.show()
+
+# if we care about the combination of latitude and longitude
+# we have to use the original data, not the summary data...
+# let's start by figuring out which column is latitude and whic 
+# is longitude
+lat_index = columns.index('Latitude')
+lon_index = columns.index('Longitude')
+
+# this will be our latitudes (x values on the scatterplot)
+lats = []
+# this will be our longitudes (y values on the scatterplot)
+lons = []
+
+# this will be the size of the dots 
+# (the number of data points at the same position on the scatterplot)
+latlonoverlap = {}
+
+for row in rows:
+    # get the lat and lon for this row
+    new_lat = row[lat_index]
+    new_lon = row[lon_index]
+
+    # check for non-numeric values indicating a missing value
+    # and leave them out of the analysis
+    if new_lat == '' or new_lat == 'NaN': 
+        new_lat = 0
+        continue
+    if new_lon == '' or new_lon == 'NaN': 
+        new_lon = 0
+        continue
+    
+    # create a tuple we can use to keep track of overlap
+    latlon = (new_lat, new_lon)
+    try:
+        latlonoverlap[latlon] = latlonoverlap[latlon] + 1
+    except KeyError:
+        latlonoverlap[latlon] = 0
+
+    # add the new value to the old values
+    lats = lats + [new_lat]
+    lons = lons + [new_lon]
+
+# now we need to construct an array that will indicate the size of each dot
+areas = []
+for lat, lon in zip(lats, lons):
+    areas = areas + [latlonoverlap[(lat, lon)]]
+
+
+# this takes a while to load and is hard to interpret
+# you may want to explore other visualizations
+# such as a histogram or even play with the axes so that certain
+# things come out better
+plt.bar(lats, areas)
+plt.show()
+
+# also takes a while to load
+# make a bar plot of all the latitudes we found
+plt.scatter(lats, lons, areas)
+plt.show()
 
