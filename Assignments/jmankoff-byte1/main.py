@@ -68,7 +68,7 @@ class MainHandler(BaseHandler):
         terms = self.request.get('search_term')
 
         # and converts it to a safe format for use in a url 
-        terms = urllib.quote(terms)
+        quoted_terms = urllib.quote(terms)
 
         # NOTE: we are now repeating (almost verbatim) things from 
         # the get method. It would be better to create and call a helper method
@@ -78,7 +78,7 @@ class MainHandler(BaseHandler):
         # now we construct the url for the yahoo pipe created in our tutorial
         # (you will want to replace this with your own url), using the search 
         # terms provided by the user in the form
-        feed = feedparser.parse("http://pipes.yahoo.com/pipes/pipe.run?_id=1nWYbWm82xGjQylL00qv4w&_render=rss&textinput1=" + terms )
+        feed = feedparser.parse("http://pipes.yahoo.com/pipes/pipe.run?_id=1nWYbWm82xGjQylL00qv4w&_render=rss&textinput1=" + quoted_terms )
         
         # this sets up feed as a list of dictionaries containing information 
         feed = [{"link": item.link, "title":item.title, "description" : item.description} for item in feed["items"]]
