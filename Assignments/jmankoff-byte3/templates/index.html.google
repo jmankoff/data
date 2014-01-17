@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+    // Load the Visualization API and the piechart package.
+    google.load('visualization', '1.0', {'packages':['corechart']});
+
+    // Log the data to the console to make sure what you are expecting
+    // is arriving
+    console.log({{data|safe}})
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.setOnLoadCallback(drawChart);
+    
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+    // Create the data table.
+    var datatable = google.visualization.arrayToDataTable({{data|safe}})
+    var options = {
+    title: 'Animal Outcomes based on Age at Arrival',
+    width: 600, height: 400,
+    chartArea: {height: '50%'},
+    vAxis: {title: 'Percent', titleTextStyle: {color: 'red'}},
+    hAxis: {title: 'Age', titleTextStyle: {color: 'red'}}
+    };      
+    
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    chart.draw(datatable, options);
+    }
+  </script>
+<meta charset="UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Data Pipeline Project Byte 3 -- Visualization
+</title>
+</head>
+<body>
+<h1>Data Pipeline Project Byte 3 -- Visualization</h1>
+
+<iframe width="500" height="300" scrolling="no" frameborder="no"
+	src="https://www.google.com/fusiontables/embedviz?q=select+col16%3E%3E0+from+1ymz3EtGdi4qKGMl5AxEFXtTlgk3tKi8iCpjTzvM&amp;viz=MAP&amp;h=false&amp;lat=38.071424981566125&amp;lng=-85.15232666015623&amp;t=1&amp;z=9&amp;l=col16%3E%3E0&amp;y=3&amp;tmplt=3&amp;hml=TWO_COL_LAT_LNG"></iframe>
+<br>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+
+
+</body>
+</html>

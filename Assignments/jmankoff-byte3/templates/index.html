@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="stylesheets/d3.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="d3/d3.v3.js"></script>
+  <meta charset="UTF-8">
+  <title>Data Pipeline Project Byte 3 -- Visualization</title>
+</head>
+ <body>
+
+    <div id="tooltip" class="hidden">
+       <p><strong>Number of Animals:</strong></p>
+       <p><span id="value">100</span>%</p>
+    </div>
+
+    <script type="text/javascript" src="d3/barchart.js"></script>
+    <script>
+       var data = {{data|safe}}
+       var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+		    11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
+    
+
+       drawgraph(dataset)
+    </script>
+ </body>
+</html>

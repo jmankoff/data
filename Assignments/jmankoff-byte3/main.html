@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Fusion Tables API Sample Application</title>
+  </head>
+  <body>
+
+    {% if has_credentials %}
+    <p>
+      Thanks for granting this application permission to access your data using the Fusion Tables API.
+    </p>
+    <p>
+      Congratulations, you are up and running! At this point you will want to
+      add calls into the Fusion Tables API to the <code>main.py</code> file.
+    </p>
+    {% else %}
+    <p>
+      You are almost there, for the final step follow the link below and grant this application permission to access your data using the Fusion Tables API.
+    </p>
+    <blockquote>
+      <a href="{{ url }}">{{ url }}</a>
+    </blockquote>
+    {% endif %}
+    <p>
+      You can always <a href="https://www.google.com/accounts/b/0/IssuedAuthSubTokens">revoke</a> permission at any time.
+    </p>
+
+
+    <p>
+      Please read the <code>main.py</code> file carefully, it contains detailed
+      information in the comments.  For more information on the Fusion Tables API
+      Python library surface you can visit:
+    </p>
+    <blockquote>
+      <p>
+      <a href="https://developers.google.com/resources/api-libraries/documentation/fusiontables/v1/python/latest/">
+      https://developers.google.com/resources/api-libraries/documentation/fusiontables/v1/python/latest/</a>
+      </p>
+    </blockquote>
+
+    <p>
+    Also check out the <a href="https://developers.google.com/api-client-library/python/start/get_started"> Python Client Library documentation</a>,
+    and get more information on the Fusion Tables API at:
+    </p>
+
+    <blockquote>
+      <p>
+      <a href="https://developers.google.com/fusiontables">https://developers.google.com/fusiontables</a>
+      </p>
+    </blockquote>
+  </body>
+</html>
