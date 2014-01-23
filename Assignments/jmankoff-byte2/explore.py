@@ -200,21 +200,8 @@ for row in rows:
     lats = lats + [new_lat]
     lons = lons + [new_lon]
 
-# now we need to construct an array that will indicate the size of each dot
-areas = []
-for lat, lon in zip(lats, lons):
-    areas = areas + [latlonoverlap[(lat, lon)]]
 
-
-# this takes a while to load and is hard to interpret
 # you may want to explore other visualizations
-# such as a histogram or even play with the axes so that certain
-# things come out better
-plt.bar(lats, areas)
-plt.show()
-
-# also takes a while to load
-# make a bar plot of all the latitudes we found
-plt.scatter(lats, lons, areas)
-plt.show()
+# such as a histogram or other aspects of the data 
+# including other columns
 
