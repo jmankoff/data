@@ -159,48 +159,6 @@ del latitude['EMPTY']
 plt.bar(latitude.keys(), latitude.values())
 plt.show()
 
-# if we care about the combination of latitude and longitude
-# we have to use the original data, not the summary data...
-# let's start by figuring out which column is latitude and whic 
-# is longitude
-lat_index = columns.index('Latitude')
-lon_index = columns.index('Longitude')
-
-# this will be our latitudes (x values on the scatterplot)
-lats = []
-# this will be our longitudes (y values on the scatterplot)
-lons = []
-
-# this will be the size of the dots 
-# (the number of data points at the same position on the scatterplot)
-latlonoverlap = {}
-
-for row in rows:
-    # get the lat and lon for this row
-    new_lat = row[lat_index]
-    new_lon = row[lon_index]
-
-    # check for non-numeric values indicating a missing value
-    # and leave them out of the analysis
-    if new_lat == '' or new_lat == 'NaN': 
-        new_lat = 0
-        continue
-    if new_lon == '' or new_lon == 'NaN': 
-        new_lon = 0
-        continue
-    
-    # create a tuple we can use to keep track of overlap
-    latlon = (new_lat, new_lon)
-    try:
-        latlonoverlap[latlon] = latlonoverlap[latlon] + 1
-    except KeyError:
-        latlonoverlap[latlon] = 0
-
-    # add the new value to the old values
-    lats = lats + [new_lat]
-    lons = lons + [new_lon]
-
-
 # you may want to explore other visualizations
 # such as a histogram or other aspects of the data 
 # including other columns
