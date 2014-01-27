@@ -43,7 +43,7 @@ print len(rows)
 # we'll ignore some columns because they are
 # not useful for our analysis (such as AnimalID and Name which
 # are unique for every animal
-ignore = [u'Outcome', u'AnimalID', u'AnimalType', u'Name', u'IconName', u'icon type']
+ignore = [u'AnimalID', u'AnimalType', u'Name', u'IconName', u'icon type']
 
 # now we want to summarize the data to facilitate exploration. To do 
 # so we will collect information about each *column* in the spreadsheet
