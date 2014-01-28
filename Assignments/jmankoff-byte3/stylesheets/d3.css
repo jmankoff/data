@@ -10,20 +10,20 @@ body {
   shape-rendering: crispEdges;
 }
 
-.bar {
-  fill: steelblue;
+text {
+  font: 10px sans-serif;
 }
 
-.x.axis path {
-  display: none;
+
+.group-label {
+  font-weight: bold;
+  text-anchor: end;
 }
 
-div.bar {
-    display: inline-block;
-    width: 20px;
-    margin-right: 2px;
-    height: 75px;   /* We'll override this later */
-    background-color: teal;
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .tooltip {
@@ -71,6 +71,3 @@ rect:hover {
         fill: orange;
 }
 
-/* svg text { */
-/*         pointer-events: none; */
-/* } */

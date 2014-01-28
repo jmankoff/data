@@ -60,55 +60,58 @@ class MainHandler(BaseHandler):
     # landing page
     def get(self):
         """default landing page"""
+        logging.info("in get")
         
-        #data = self.get_all_data()
+        data = self.get_all_data()
+        columns = data['columns']
+        rows = data['rows']
 
-        data = [[{'x':0, 'y':35},
-                 {'x':1, 'y':40}],
-                [{'x':0, 'y':30}, 
-                 {'x':1, 'y':20}]]
-        context = {'data':json.encode(data),
-                   'x_labels':['adopted', 'euthanized'],
-                   'y_labels':['0-6m', '6m-1y']}
-        
-        #table = {'<6mo':0, '6mo-1yr':0, '1-7':0, '>7':0}
         # specify the ages we will search for
-        ages = ['Infant - Younger than 6 months', 'Youth - Younger than 1 year', 'Older than 1 year', 'Older than 7 years']
+        age_mapping = {u'Infant - Younger than 6 months':'<6mo',
+                       u'Youth - Younger than 1 year':'6mo-1yr',
+                       u'Older than 1 year':'1yr-6yr',
+                       u'Older than 7 years':'>7yr',
+                       u'':'Unspecified'}
+        # create an 'empty' array storing the number of dogs in each outcome
         
         # specify the outcomes we will search for
-        outcomes = ['Adopted', 'Euthanized', 'Foster', 'Returned to Owner', 'Transferred to Rescue Group']
-    
-        # set up the rest of the data table by counting up the number
-        # of rows in each combination of age and outcome for each age
-        # note that this is a lot of queries and takes about 30 seconds
-        # to run. 
+        outcomes = ['Adopted', 'Euthanized', 'Foster', 'Returned to Owner', 'Transferred to Rescue Group', 'Other']
+        ages = ['<6mo', '6mo-1yr', '1yr-6yr', '>7yr', 'Unspecified']
+
+        age_by_outcome = []
         for age in ages:
-            # create a row to store the number of rows for each outcome
-            row = []
-            
-            # and create a variable to store the total number of rows
-            # for that age across all outcomes
-            total = 0
+            res = {'Age': age}
+            for outcome in outcomes:
+                res[outcome] = 0
+            age_by_outcome = age_by_outcome + [res]
+        logging.info(age_by_outcome)
 
-            # for each outcome
-            #for outcome in outcomes:
+        # find the column id for ages
+        ageid = columns.index(u'Age')
+        
+        # find the column id for outcomes
+        outcomeid = columns.index(u'Outcome')
 
-            # divide everything in the row by the total 
-            # number of responses in that age across all outcomes
-            # to get a percentage
-            #row = [x/total for x in row]
+        for row in rows: 
+            age = age_mapping[row[ageid]]
+            outcome = row[outcomeid]
+            if age in ages:
+                age_position = ages.index(age)
+            else:
+                age_position = ages.index('Other')
 
-            # add the row. We include [age] because the first
-            # column of the data needs to have the label for each row 
-            #data = data + [[age] + row]
+            if outcome not in outcomes: outcome = 'Other'
 
-        # log the result to make sure it looks correct
-        #logging.info("data")
-        #logging.info(data)
+            outcomes_for_age = age_by_outcome[age_position]
+            outcomes_for_age[outcome] = outcomes_for_age[outcome] + 1
 
+        logging.info(age_by_outcome)
+    
         # add it to the context being passed to jinja
-        variables = {'data':json.encode(data)}
-
+        variables = {'data':json.encode(age_by_outcome),
+                     'y_labels':outcomes,
+                     'x_labels':ages}
+       
         # and render the response
         self.render_response('index.html', variables)
         
@@ -117,9 +120,8 @@ class MainHandler(BaseHandler):
     def get_all_data(self):
         """ collect data from the server. """
         # limited to 10 rows
-        query = "SELECT * FROM " + TABLE_ID + " WHERE  AnimalType = 'DOG' LIMIT 10"
+        query = "SELECT * FROM " + TABLE_ID + " WHERE  AnimalType = 'DOG'"
         response = service.query().sql(sql=query).execute()
-        logging.info(response)
         return response
             
       
