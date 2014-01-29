@@ -18,10 +18,10 @@ import urllib
 import numpy
 
 # This API key is provided by google as described in the tutorial
-API_KEY = 'AIzaSyAz7ASJbZew8v09mdFjwG3z0_n8HhTB02I'
+API_KEY = ''
 
 # This is the table id for the fusion table
-TABLE_ID = '1ymz3EtGdi4qKGMl5AxEFXtTlgk3tKi8iCpjTzvM'
+TABLE_ID = ''
 
 # This uses discovery to create an object that can talk to the 
 # fusion tables API using the developer key

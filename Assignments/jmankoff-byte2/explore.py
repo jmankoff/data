@@ -5,6 +5,7 @@ import json
 import csv
 import matplotlib.pyplot as plt 
 
+
 # This API key is provided by google as described in the tutorial
 API_KEY = '... add your own ...'
 
@@ -154,6 +155,8 @@ latitude = summary['Latitude']
 # need to replace the "EMPTY" key with a numeric value for plotting
 latitude[0] = latitude['EMPTY']
 del latitude['EMPTY']
+
+latitude = dict((float(k), v) for k, v in latitude.iteritems())
 
 # make a bar plot of all the latitudes we found
 plt.bar(latitude.keys(), latitude.values())
