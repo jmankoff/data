@@ -84,7 +84,6 @@ class MainHandler(BaseHandler):
             for outcome in outcomes:
                 res[outcome] = 0
             age_by_outcome = age_by_outcome + [res]
-        logging.info(age_by_outcome)
 
         # find the column id for ages
         ageid = columns.index(u'Age')
@@ -92,17 +91,26 @@ class MainHandler(BaseHandler):
         # find the column id for outcomes
         outcomeid = columns.index(u'Outcome')
 
+        # loop through each row
         for row in rows: 
+            # get the age of the dog in that row
             age = age_mapping[row[ageid]]
+            # get the outcome for the dog in that row
             outcome = row[outcomeid]
+            # if the age is a known value (good data) find
+            # out which of the items in our list it corresponds to
             if age in ages:
                 age_position = ages.index(age)
+            # otherwise we will store the data in the 'Other' age column
             else:
                 age_position = ages.index('Other')
 
+            # if the outcome is a bad value, we call it 'Other' as well
             if outcome not in outcomes: outcome = 'Other'
 
+            # now get the current number of dogs with that outcome and age
             outcomes_for_age = age_by_outcome[age_position]
+            # and increase it by one
             outcomes_for_age[outcome] = outcomes_for_age[outcome] + 1
 
         logging.info(age_by_outcome)

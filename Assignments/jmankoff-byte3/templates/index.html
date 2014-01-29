@@ -10,10 +10,8 @@
 
     <div id="tooltip" class="hidden">
        <p><strong>Number of Animals:</strong></p>
-       <p><span id="value">100</span>%</p>
+       <p><span id="value">100</span></p>
     </div>
-
-    <script type="text/javascript" src="d3/barchart.js"></script>
     <script>
        // ----------- EVERY CHART NEEDS DATA --------------
        // this is the data we passed from main.py
@@ -26,11 +24,34 @@
        // y_labels is an array of all the outcomes 
        var y_labels = {{y_labels|safe}}
        
+
        // uncomment this if you want to see what data looks like on
        // the javascript side. You'll need to open the javascript
        // console in your browser to see the result
        //console.log(data);
 
+       // ------- EVERY CHART NEEDS DATA ORGANIZED FOR EASY DISPLAY -----
+       // for each entry in the data array (one per age)
+       // TODO can we put this just after we load the data?
+       data.forEach(function(d) {
+         // the y0 position (lowest position) for the stacked bars will be 0 
+         var y0 = 0;
+         // however we want to calculate a y position
+	 // for each of the bars so that they sit on top of each other.
+	 // for this, we need to loop through all of the
+	 // y labels. We store these in an array called 'outcomes' 
+         d.outcomes = y_labels.map(function(name) {
+          // each outcome has a name, a y0 position (it's bottom), 
+	  // and a y1 position (it's top). 
+          res = {name: name, y0: y0, y1: y0 + d[name]};
+	  // and we also have to update y0 for the next rectangle.
+          y0 = y0 + d[name];
+          return res;});
+         // we also store the total height for this stacked bar
+         // (which is the y1 of the last bar (stored at length-1)
+         d.total = d.outcomes[d.outcomes.length - 1].y1;
+       });
+       
        // ----------- EVERY CHART NEEDS SOME SETUP --------------
        //Width and height and margins for the plot 
        var margin = {top: 20, right: 20, bottom: 30, left: 40},
@@ -41,12 +62,18 @@
        var x = d3.scale.ordinal()
               .rangeRoundBands([0, width], .1);
 
+       // this specifies the range of the x axis, which is ordinal
+       x.domain(x_labels);
+
        // set up the y axis scale to go from 0 to height
        var y = d3.scale.linear()
               .rangeRound([height, 0]);       
 
-       // set up the color scale (there are 5 ages) 
-       // TODO can we pick 5 colors instead?
+       // this specifies the range of the y axis (0 to the height of
+       // the tallest bar), which is linear 
+       y.domain([0, d3.max(data, function(d) { return d.total; })]);
+
+       // set up the color scale (there are 6 outcomes) 
        var color = d3.scale.ordinal()
               .range(["#C8A57F", "#B0AE6E", "#77BA84", "#29BDBF",
        "#70B0F1", "#EB88E2"]);
@@ -65,32 +92,9 @@
        // associate the y labels with the color scale
        color.domain(y_labels);
 
-       // ------- EVERY CHART NEEDS DATA ORGANIZED FOR EASY DISPLAY -----
-       // for each entry in the data array (one per age)
-       // TODO can we put this just after we load the data?
-       data.forEach(function(d) {
-         // the y0 position (lowest position) for the stacked bars will be 0 
-         var y0 = 0;
-         // however we want to calculate a y position
-	 // for each of the bars so that they sit on top of each other.
-	 // for this, we need to loop through all of the
-	 // y labels TODO could we loop through y_labels instead of
-	 // color.domain() to make this clearer?
-         // we store these in an array called 'outcomes' 
-         d.outcomes = color.domain().map(function(name) {
-          // each outcome has a name, a y0 position (it's bottom), 
-	  // and a y1 position (it's top). Note that when we
-	  // set y1 we are simultaneously updating y0 so 
-	  // that it equals y1 (which will be the next bar's bottom)
-          return {name: name, y0: y0, y1: y0 += d[name]}; });
-         // we also store the total height for this stacked bar
-         // (which is the y1 of the last bar (stored at length-1)
-         d.total = d.outcomes[d.outcomes.length - 1].y1;
-       });
-       
-       
        // ------- D3's DOM MANIPULATION MAGIC GOES HERE -------
-       // the svg element is for drawing. We set it's size based 
+
+       // the svg element is for drawing. We set its size based 
        // on the margins defined earlier
        var svg = d3.select("body").append("svg")
           .attr("width", width + margin.left + margin.right)
@@ -98,19 +102,6 @@
 	// and add a group that is inside the margins
         .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-       
-       // TODO this seems like a repeat. can we delete it?
-       color.domain(y_labels);
-
-       // this specifies the range of the x axis, which is ordinal
-       // TODO can we move this up to where we define the axes?
-       x.domain(x_labels);
-
-       // this specifies the range of the y axis (0 to the height of
-       // the tallest bar), which is linear 
-       // TODO can we move this up to where we define the axes?
-       y.domain([0, d3.max(data, function(d) { return d.total; })]);
-
        // draw the x axis (D3 handles the details in '.call')
        svg.append("g")
          .attr("class", "x axis")
@@ -128,7 +119,7 @@
          .style("text-anchor", "end")
          .text("Number of Animals");
 
-       
+       // Create a group for each age
        var age = svg.selectAll(".Age")
            .data(data)
          .enter().append("g")
@@ -136,41 +127,54 @@
            .attr("x_position", function (d) {return x(d.Age);})
            .attr("transform", function(d) {return "translate(" + x(d.Age) + ",0)"; });
 
+       // create a rectangle for each outcome (for each age)
        age.selectAll("rect")
+            // bind the outcome data for that age to that rectangle
            .data(function(d) { return d.outcomes; })
          .enter().append("rect")
            .attr("width", x.rangeBand())
+           // use the outcome data to determine y position and height
            .attr("y", function(d) { return y(d.y1); })
            .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+           // use the color scale to determine the fill color
            .attr("fill", function(d) { return color(d.name); })
+           // and cause it to show a tooltip on mouse over
            .on("mouseover", function(d) {
                //Get this bar's x/y values, then augment for the tooltip
                var xPosition = parseFloat(d3.select(this.parentNode).attr("x_position")) + 
                    x.rangeBand() / 2;
                var yPosition = parseFloat(d3.select(this).attr("y")) +   14;
+
                //Update the tooltip position and value
                d3.select("#tooltip")
                    .style("left", xPosition + "px")
                    .style("top", yPosition + "px")
                    .select("#value")
-                   .text(d);
-               //Show the tooltip
+                   .text(d.y1-d.y0 + " animals were " + d.name + ".");
+
+               //Show the tooltip (it's a div that is otherwise always hidden)
                d3.select("#tooltip").classed("hidden", false);
+            })
+	    // and cause it to disappear when the mouse exits 
+	    .on("mouseout", function(d) {
+               d3.select("#tooltip").classed("hidden", true)});
 
-            });
-
+       // create a legend with a 20 pixel high separation between
+       // items (one item per color in the scale)
        var legend = svg.selectAll(".legend")
             .data(color.domain().slice().reverse())
          .enter().append("g")
             .attr("class", "legend")
             .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
 
+       // fill it with 18 x 18 rectangles in the colors
        legend.append("rect")
             .attr("x", width - 18)
             .attr("width", 18)
             .attr("height", 18)
             .style("fill", color);
 
+       // and add text 
        legend.append("text")
            .attr("x", width - 24)
            .attr("y", 9)
