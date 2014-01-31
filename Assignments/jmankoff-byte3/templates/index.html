@@ -31,21 +31,26 @@
        //console.log(data);
 
        // ------- EVERY CHART NEEDS DATA ORGANIZED FOR EASY DISPLAY -----
-       // for each entry in the data array (one per age)
-       // TODO can we put this just after we load the data?
+       // for each set of outcomes in the data array (one set of outcomes per age)
+       // we add a new array (d.outcomes) with information about every sub-bar's 
+       // y0 and y1 position for that age; and a new value (d.total) with 
+       // information about the total height of the stacked bar
        data.forEach(function(d) {
          // the y0 position (lowest position) for the stacked bars will be 0 
          var y0 = 0;
          // however we want to calculate a y position
 	 // for each of the bars so that they sit on top of each other.
 	 // for this, we need to loop through all of the
-	 // y labels. We store these in an array called 'outcomes' 
+	 // y labels. This runs function(name) once for each y label (name is the current label)
+         // and stores each resulting dictionary in the array d.outcomes
          d.outcomes = y_labels.map(function(name) {
           // each outcome has a name, a y0 position (it's bottom), 
-	  // and a y1 position (it's top). 
+	  // and a y1 position (it's top). d[name] is the number of
+	  // dogs with 'name' as their outcome (for this age)
           res = {name: name, y0: y0, y1: y0 + d[name]};
 	  // and we also have to update y0 for the next rectangle.
           y0 = y0 + d[name];
+          // then we return the dictionary we just created (which will be stored in d.outcomes)
           return res;});
          // we also store the total height for this stacked bar
          // (which is the y1 of the last bar (stored at length-1)
@@ -59,17 +64,19 @@
           height = 500 - margin.top - margin.bottom;
        
        // set up the x axis scale to go from 0 to width
+       // rangeRoundBands sets up the bar width with no 
+       // fractional pixels, and the .1 specifies the distance between bars
        var x = d3.scale.ordinal()
               .rangeRoundBands([0, width], .1);
 
-       // this specifies the range of the x axis, which is ordinal
+       // this specifies the domain of the x axis, which is ordinal
        x.domain(x_labels);
 
        // set up the y axis scale to go from 0 to height
        var y = d3.scale.linear()
               .rangeRound([height, 0]);       
 
-       // this specifies the range of the y axis (0 to the height of
+       // this specifies the domain of the y axis (0 to the height of
        // the tallest bar), which is linear 
        y.domain([0, d3.max(data, function(d) { return d.total; })]);
 
@@ -94,13 +101,14 @@
 
        // ------- D3's DOM MANIPULATION MAGIC GOES HERE -------
 
-       // the svg element is for drawing. We set its size based 
-       // on the margins defined earlier
+       // the svg element is for drawing. 
        var svg = d3.select("body").append("svg")
+          // note that we need to accound for margins 'by hand'
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
 	// and add a group that is inside the margins
         .append("g")
+          // this makes sure that everything we do inside this group is translated to margin coordinates
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
        // draw the x axis (D3 handles the details in '.call')
        svg.append("g")
@@ -119,18 +127,21 @@
          .style("text-anchor", "end")
          .text("Number of Animals");
 
-       // Create a group for each age
+       // The selection '.age' will correspond to the data
        var age = svg.selectAll(".Age")
+           // this joins the data to the selected elements
            .data(data)
+         // the call to enter() actually creates the elements (one group per bar) and binds it to the data
          .enter().append("g")
            .attr("class", "g")
            .attr("x_position", function (d) {return x(d.Age);})
            .attr("transform", function(d) {return "translate(" + x(d.Age) + ",0)"; });
 
-       // create a rectangle for each outcome (for each age)
+       // this selects 'rect' which will correspond to one rect for each outcome in a bar (age)
        age.selectAll("rect")
-            // bind the outcome data for that age to that rectangle
+            // join the outcome data for that age to each rectangle
            .data(function(d) { return d.outcomes; })
+         // the call to enter() creates the elements (one rect per outcome) and binds them to the data
          .enter().append("rect")
            .attr("width", x.rangeBand())
            // use the outcome data to determine y position and height
@@ -162,6 +173,7 @@
        // create a legend with a 20 pixel high separation between
        // items (one item per color in the scale)
        var legend = svg.selectAll(".legend")
+            // our data is the array of colors we created earlier
             .data(color.domain().slice().reverse())
          .enter().append("g")
             .attr("class", "legend")
