@@ -16,6 +16,7 @@ import httplib2
 from apiclient.discovery import build
 import urllib
 import numpy
+from django.utils import simplejson
 
 # This API key is provided by google as described in the tutorial
 API_KEY = ''
@@ -99,11 +100,9 @@ class MainHandler(BaseHandler):
             outcome = row[outcomeid]
             # if the age is a known value (good data) find
             # out which of the items in our list it corresponds to
-            if age in ages:
-                age_position = ages.index(age)
+            if age in ages: age_position = ages.index(age)
             # otherwise we will store the data in the 'Other' age column
-            else:
-                age_position = ages.index('Other')
+            else: age_position = ages.index('Other')
 
             # if the outcome is a bad value, we call it 'Other' as well
             if outcome not in outcomes: outcome = 'Other'
@@ -127,11 +126,19 @@ class MainHandler(BaseHandler):
     # pass in the name of the file the data should be stored in
     def get_all_data(self):
         """ collect data from the server. """
-        # limited to 10 rows
-        query = "SELECT * FROM " + TABLE_ID + " WHERE  AnimalType = 'DOG'"
-        response = service.query().sql(sql=query).execute()
-        return response
+
+        # open the data stored in a file called "data.json"
+        try:
+            fp = open("data/data.json")
+            response = simplejson.load(fp)
+        # but if that file does not exist, download the data from fusiontables
+        except IOError:
+            logging.info("failed to load file")
+            service = build('fusiontables', 'v1', developerKey=API_KEY)
+            query = "SELECT * FROM " + TABLE_ID + " WHERE  AnimalType = 'DOG'"
+            response = service.query().sql(sql=query).execute()
             
+        return response
       
         
 # This specifies that MainHandler should handle a request to 
