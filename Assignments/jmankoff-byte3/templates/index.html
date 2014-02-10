@@ -67,14 +67,14 @@
        // set up the x axis scale to go from 0 to width
        // rangeRoundBands sets up the bar width with no 
        // fractional pixels, and the .1 specifies the distance between bars
-       var x = d3.scale.ordinal()
+       var x_scale = d3.scale.ordinal()
               .rangeRoundBands([0, width], .1);
 
        // this specifies the domain of the x axis, which is ordinal
        x.domain(x_labels);
 
        // set up the y axis scale to go from 0 to height
-       var y = d3.scale.linear()
+       var y_scale = d3.scale.linear()
               .rangeRound([height, 0]);       
 
        // this specifies the domain of the y axis (0 to the height of
@@ -88,12 +88,12 @@
        
        // create the x axis 
        var xAxis = d3.svg.axis()
-                   .scale(x)
+                   .scale(x_scale)
                    .orient("bottom");
 
        // create the y axis
        var yAxis = d3.svg.axis()
-                  .scale(y)
+                  .scale(y_scale)
                   .orient("left")
                   .tickFormat(d3.format(".2s"));
 
@@ -135,8 +135,8 @@
          // the call to enter() actually creates the elements (one group per bar) and binds it to the data
          .enter().append("g")
            .attr("class", "g")
-           .attr("x_position", function (d) {return x(d.Age);})
-           .attr("transform", function(d) {return "translate(" + x(d.Age) + ",0)"; });
+           .attr("x_position", function (d) {return x_scale(d.Age);})
+           .attr("transform", function(d) {return "translate(" + x_scale(d.Age) + ",0)"; });
 
        // this selects 'rect' which will correspond to one rect for each outcome in a bar (age)
        age.selectAll("rect")
@@ -146,8 +146,8 @@
          .enter().append("rect")
            .attr("width", x.rangeBand())
            // use the outcome data to determine y position and height
-           .attr("y", function(d) { return y(d.y1); })
-           .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+           .attr("y", function(d) { return y_scale(d.y1); })
+           .attr("height", function(d) { return y_scale(d.y0) - y_scale(d.y1); })
            // use the color scale to determine the fill color
            .attr("fill", function(d) { return color(d.name); })
            // and cause it to show a tooltip on mouse over
