@@ -71,7 +71,7 @@
               .rangeRoundBands([0, width], .1);
 
        // this specifies the domain of the x axis, which is ordinal
-       x.domain(x_labels);
+       x_scale.domain(x_labels);
 
        // set up the y axis scale to go from 0 to height
        var y_scale = d3.scale.linear()
@@ -79,7 +79,7 @@
 
        // this specifies the domain of the y axis (0 to the height of
        // the tallest bar), which is linear 
-       y.domain([0, d3.max(data, function(d) { return d.total; })]);
+       y_scale.domain([0, d3.max(data, function(d) { return d.total; })]);
 
        // set up the color scale (there are 6 outcomes) 
        var color = d3.scale.ordinal()
@@ -144,7 +144,7 @@
            .data(function(d) { return d.outcomes; })
          // the call to enter() creates the elements (one rect per outcome) and binds them to the data
          .enter().append("rect")
-           .attr("width", x.rangeBand())
+           .attr("width", x_scale.rangeBand())
            // use the outcome data to determine y position and height
            .attr("y", function(d) { return y_scale(d.y1); })
            .attr("height", function(d) { return y_scale(d.y0) - y_scale(d.y1); })
@@ -154,7 +154,7 @@
            .on("mouseover", function(d) {
                //Get this bar's x/y values, then augment for the tooltip
                var xPosition = parseFloat(d3.select(this.parentNode).attr("x_position")) + 
-                   x.rangeBand() / 2;
+                   x_scale.rangeBand() / 2;
                var yPosition = parseFloat(d3.select(this).attr("y")) +   14;
 
                //Update the tooltip position and value
