@@ -62,7 +62,7 @@ class MainHandler(webapp2.RequestHandler):
                 self.response.write('%s\n' % str(r))
 
             self.response.write("#activity per day")
-            cursor.execute("SELECT FROM_UNIXTIME(timestamp/1000,'%Y-%m-%d') as day, activity_name, (max(timestamp)-min(timestamp))/1000 as time_elapsed_seconds FROM plugin_google_activity_recognition GROUP BY day, activity_name, FROM_UNIXTIME(timestamp/1000,'%Y-%m-%d %H:%m');")
+            cursor.execute("SELECT FROM_UNIXTIME(timestamp/1000,'%Y-%m-%d') as day, activity_name, (max(timestamp)-min(timestamp))/1000 FROM_UNIXTIME(timestamp/1000, '%Y-%m-%d %H:%i') as time_elapsed_seconds FROM plugin_google_activity_recognition ORDER BY FROM_UNIXTIME(timestamp/1000, '%Y-%m-%d %H:%i');")
             for r in cursor.fetchall():
                 self.response.write('%s\n' % str(r))
 
