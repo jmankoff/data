@@ -19,7 +19,7 @@ from google.appengine.api import files
 from google.appengine.ext import db
 import MySQLdb
 import os
-
+import logging
 
 # Define your production Cloud SQL instance information.
 _INSTANCE_NAME = 'jmankoff-byte4:aware'
@@ -36,40 +36,85 @@ class MainHandler(webapp2.RequestHandler):
             os.getenv('SERVER_SOFTWARE').startswith('Google App Engine/')):
             db = MySQLdb.connect(unix_socket='/cloudsql/' + _INSTANCE_NAME, db=_DB, user='root')
             cursor = db.cursor()
-            self.response.write('SHOW TABLES')
-            cursor.execute('SHOW TABLES')
-            for r in cursor.fetchall():
-                self.response.write('%s\n' % str(r))
 
-            self.response.write('SELECT * FROM mqtt_messages LIMIT 20')
-            cursor.execute('SELECT * FROM mqtt_messages LIMIT 20')
-            for r in cursor.fetchall():
-                self.response.write('%s\n' % str(r))
+            try:
+                cursor.execute('set profiling = 1')
 
-            self.response.write('SELECT * FROM plugin_google_activity_recognition LIMIT 20')
-            cursor.execute('SELECT * FROM plugin_google_activity_recognition LIMIT 20')
-            for r in cursor.fetchall():
-                self.response.write('%s\n' % str(r))
+                self.response.write('SHOW TABLES')
+                cursor.execute('SHOW TABLES')
+                for r in cursor.fetchall():
+                    self.response.write('%s\n' % str(r))
+                self.response.write('\n')
 
-            self.response.write('SELECT * FROM plugin_mode_of_transportation LIMIT 20')
-            cursor.execute('SELECT * FROM plugin_mode_of_transportation LIMIT 20')
-            for r in cursor.fetchall():
-                self.response.write('%s\n' % str(r))
+                self.response.write('SELECT * FROM mqtt_messages LIMIT 20')
+                cursor.execute('SELECT * FROM mqtt_messages LIMIT 20')
+                for r in cursor.fetchall():
+                    self.response.write('%s\n' % str(r))
+                self.response.write('\n')
 
+                self.response.write('SELECT * FROM plugin_google_activity_recognition LIMIT 20')
+                cursor.execute('SELECT * FROM plugin_google_activity_recognition LIMIT 20')
+                for r in cursor.fetchall():
+                    self.response.write('%s\n' % str(r))
+                self.response.write('\n')
 
-            self.response.write('SELECT * FROM locations LIMIT 20')
-            cursor.execute('SELECT * FROM locations LIMIT 20')
-            for r in cursor.fetchall():
-                self.response.write('%s\n' % str(r))
+                self.response.write('SELECT * FROM plugin_mode_of_transportation LIMIT 20')
+                cursor.execute('SELECT * FROM plugin_mode_of_transportation LIMIT 20')
+                for r in cursor.fetchall():
+                    self.response.write('%s\n' % str(r))
+                self.response.write('\n')
+
+                self.response.write('SELECT * FROM locations LIMIT 20')
+                cursor.execute('SELECT * FROM locations LIMIT 20')
+                for r in cursor.fetchall():
+                    self.response.write('%s\n' % str(r))
+                self.response.write('\n')
+
+                cursor.execute("SELECT from_unixtime(locations.timestamp/1000,'%Y-%m-%d') as day_with_data, count(*) as records FROM locations GROUP by day_with_data;")
+                self.response.write("#Days with data from location data")
+                for r in cursor.fetchall():
+                    self.response.write('%s\n' % str(r))
+                self.response.write('\n')
+
+                day = "FROM_UNIXTIME(timestamp/1000,'%Y-%m-%d')"
+                time_of_day = "FROM_UNIXTIME(timestamp/1000,'%H:%i')"
+                table = "locations"
+                query = "SELECT {0} as day, {1} as time_of_day, double_latitude, double_longitude FROM {2} GROUP BY day, time_of_day".format(day, time_of_day, table)
+                self.response.write(query)
+                cursor.execute(query)
+                for r in cursor.fetchall():
+                    self.response.write('%s=n' % str(r))
+                self.response.write('\n')
+                
+                # physical activity per day, time of day (granularity of minutes), 
+                # activity name and time in seconds
+                day_and_time_of_day = "FROM_UNIXTIME(timestamp/100, '%Y-%m-%d %H:%i'"
+                elapsed_seconds = "(max(timestamp)-min(timestamp))/1000"
+                table = plugin_google_activity_recognition
+                query = "SELECT {0} as day, {1} as time_of_day, activity_name, {2} as time_elapsed_seconds FROM  {3} GROUP BY day, activity_name, {4}".format(day, time_of_day, time_elapsed_seconds, table, day_and_time_of_day)
+                self.response.write(query)
+                #cursor.execute(query)
+                #for r in cursor.fetchall():
+                #self.response.write('%s=n' % str(r))
+                self.response.write('\n')
+            
+                # physical activity per day, time of day (granularity of hour),
+                # activity name and time in seconds
+                # - maybe this one is more useful :)
+                query = "SELECT {0} as day, {1} as time_of_day, activity_name, {2}  as time_elapsed_seconds FROM {3}  GROUP BY day, activity_name, {4}".format(day, time_of_day, time_elapsed_seconds, table, day_and_time_of_day)
+                self.response.write(query)
+                #cursor.execute(query)
+                #for r in cursor.fetchall():
+                #self.response.write('%s=n' % str(r))
+                self.response.write('\n')
+
+            except Exception:
+                cursor.execute('show profiles')
+                for row in cursor:
+                    logging.info(row)        
+                    cursor.execute('set profiling = 0')
 
             db.close()
-
-            day = "FROM_UNIXTIME(timestamp/1000,'%Y-%m-%d')"
-            time_of_day = "FROM_UNIXTIME(timestamp/1000,'%H:%i')"
-            query = "SELECT {0} as day, {1} as time_of_day, double_latitude, double_longitude FROM locations GROUP BY day, time_of_day".format(day, time_of_day)
-            self.response.write(query)
-            cursor.execute(query)
-            
 
         else:
             self.response.write('Need to connect from Google Appspot')
