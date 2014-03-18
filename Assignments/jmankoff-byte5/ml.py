@@ -1,4 +1,5 @@
 import httplib2
+from StringIO import StringIO
 from apiclient.discovery import build
 import urllib
 import json
@@ -55,6 +56,7 @@ dog_outcomes = np.array([0.0,0,0,0,0,0])
 
 # loop through all of the rows of data
 rows = dogs['rows'] # the actual data 
+
 for dog in rows:
     # get the outcome for this dog
     outcome = dog[0]
@@ -187,6 +189,10 @@ except IOError:
 # as that might bias the results
 # It may be important to calculate features based on these though
 # such as something that deals better with mixed breeds to improve the results
+
+# IMPORTANT NOTE: make sure these appear in this array in the same order as they
+# do in the columns array (this will help with labeling later in the machine
+# learning work)
 features = ['AnimalType', 'IntakeMonth', 'Breed', 'Age', 'Sex', 'SpayNeuter',
             'Size', 'Color', 'IntakeType']
 # this will be the class we are predicting.
@@ -217,29 +223,6 @@ for i in np.arange(ncols):
 
 # Now we create a new array that only has the columns we care about in it
 X = all_data[:, use_data]
-
-# and we need to convert all the data from strings to numeric values
-le = preprocessing.LabelEncoder()
-labels = []
-
-# collect all the labels. The csv files we are loading 
-# were generated back in byte 2 and are provided as part
-# of this source code. They just contain all possible
-# values for each column. We're putting those values all
-# in a list now
-for name in features:
-    csvfile = open('data/{0}.csv'.format(name), 'rb')
-    datareader = csv.reader(csvfile, delimiter=',')
-    for row in datareader:
-        labels.append(row[0])
-
-# make a label for empty values too
-labels.append(u'')
-le.fit(labels)
-# now transform the array to have only numeric values instead
-# of strings
-X = le.transform(X)
-
 # This is just the column with the outcome values
 y = all_data[:, out_index]
 
@@ -266,6 +249,66 @@ y[y==u'Adopted']="Home"
 y[y==u'Euthanized']="Euthanized"
 # So for now we have 5 classes total: Other, Foster, Owner, Adopted, Euthanized
 Outcomes = ["Euth.", "Home", "Other"]
+
+# We'll use the first 20%. This is fine
+# to do because we know the data is randomized.
+nrows = len(all_data)
+percent = len(X)/20
+X_opt = X[:percent, :]
+y_opt = y[:percent]
+X_opt = np.insert(X_opt, len(features), y_opt, axis=1)
+
+# and a train/test set
+X_rest = X[percent:, :]
+y_rest = y[percent:]
+
+# ======================================================
+# print out files for orange if you want to use that
+# ======================================================
+
+import csv
+with open("data/orange_opt.csv", "w+") as csvfile:
+    datawriter = csv.writer(csvfile, delimiter=',',
+                            quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    datawriter.writerow(features + ["Class"])
+    for row in X_opt:
+        datawriter.writerow(row)
+
+
+import csv
+with open("data/orange_rest.csv", "w+") as csvfile:
+    datawriter = csv.writer(csvfile, delimiter=',',
+                            quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    datawriter.writerow(features + ["Class"])
+    for row in X_rest:
+        datawriter.writerow(row)
+
+
+# ======================================================
+# use scikit-learn
+# ======================================================
+
+# and we need to convert all the data from strings to numeric values
+le = preprocessing.LabelEncoder()
+labels = []
+le
+# collect all the labels. The csv files we are loading 
+# were generated back in byte 2 and are provided as part
+# of this source code. They just contain all possible
+# values for each column. We're putting those values all
+# in a list now
+for name in features:
+    csvfile = open('data/{0}.csv'.format(name), 'rb')
+    datareader = csv.reader(csvfile, delimiter=',')
+    for row in datareader:
+        labels.append(row[0])
+# make a label for empty values too
+labels.append(u'')
+le.fit(labels)
+
+# now transform the array to have only numeric values instead
+# of strings
+X = le.transform(X)
 
 # Lastly we need to split these into a optimization set
 # using about 20% of the data

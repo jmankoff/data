@@ -1,0 +1,958 @@
+AnimalType,IntakeMonth,Breed,Age,Sex,SpayNeuter,Size,Color,IntakeType,Class
+DOG,January,,Older than 1 year,FEMALE,true,SMALL,WHITE,Stray,Home
+CAT,May,,,UNKNOWN,false,MED,GRAY TABBY,Stray,Other
+DOG,March,FOX TERR WIRE - CHIHUAHUA SH,Older than 7 years,MALE,false,SMALL,WHITE,Owner Surrender,Euthanized
+CAT,April,MANX - DOMESTIC SH,Older than 1 year,FEMALE,true,MED,BLACK,Owner Surrender,Euthanized
+DOG,January,,Older than 7 years,FEMALE,true,X-LRG,BROWN,Owner Surrender,Euthanized
+DOG,June,CHOW CHOW - MIX,Older than 1 year,FEMALE,true,MED,BLACK,Owner Surrender,Euthanized
+DOG,March,,Infant - Younger than 6 months,MALE,true,PUPPY,TRICOLOR,Stray,Home
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,BRN TABBY,Foster Return,Home
+DOG,December,,Older than 1 year,FEMALE,true,X-LRG,WHITE,Stray,Other
+CAT,July,,Older than 1 year,MALE,false,MED,BLACK,Owner Surrender,Euthanized
+DOG,February,,Older than 1 year,MALE,false,MED,CHOCOLATE,Stray,Home
+CAT,October,,Older than 1 year,FEMALE,true,LARGE,BRN TABBY,Owner Surrender,Euthanized
+DOG,January,BEAGLE - MIX,,MALE,false,MED,TRICOLOR,Stray,Euthanized
+CAT,July,,,FEMALE,false,KITTN,BRN TABBY,Stray,Euthanized
+DOG,August,BEAGLE - BOXER,Older than 1 year,FEMALE,true,MED,BROWN,Owner Surrender,Home
+CAT,July,,Infant - Younger than 6 months,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+CAT,May,,,UNKNOWN,false,KITTN,GRAY,Stray,Euthanized
+CAT,April,,,UNKNOWN,false,KITTN,BLACK,Stray,Other
+DOG,August,BORDER TERRIER - SHIH TZU,Youth - Younger than 1 year,MALE,true,SMALL,WHITE,Stray,Home
+CAT,January,,,FEMALE,false,LARGE,BRN TIGER,Stray,Euthanized
+CAT,April,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+DOG,November,,Older than 1 year,FEMALE,true,MED,YELLOW,Owner Surrender,Other
+DOG,June,DALMATIAN - MIX,Older than 1 year,MALE,false,LARGE,WHITE,Stray,Other
+CAT,April,,,MALE,true,MED,BLACK,Stray,Other
+DOG,January,,Youth - Younger than 1 year,MALE,true,MED,BROWN,Stray,Home
+DOG,March,LABRADOR RETR - MIX,Older than 1 year,MALE,true,MED,BLACK,Owner Surrender,Euthanized
+CAT,March,,,UNKNOWN,false,KITTN,CALICO,Stray,Other
+CAT,March,,Older than 1 year,FEMALE,false,MED,CALICO,Stray,Euthanized
+CAT,October,,,FEMALE,false,MED,CALICO,Stray,Euthanized
+DOG,July,,Infant - Younger than 6 months,FEMALE,false,PUPPY,BROWN,Impound,Other
+CAT,January,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLACK,Owner Surrender,Home
+CAT,July,,Infant - Younger than 6 months,MALE,false,KITTN,GRAY,Owner Surrender,Euthanized
+DOG,June,,Older than 1 year,FEMALE,true,MED,TRICOLOR,Owner Surrender,Other
+CAT,February,,,UNKNOWN,false,MED,ORG TABBY,Stray,Euthanized
+CAT,August,,,UNKNOWN,false,MED,BRN TABBY,Stray,Euthanized
+DOG,February,CHOW CHOW - GERM SHEPHERD,Older than 1 year,MALE,true,MED,RED,Stray,Home
+CAT,July,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+CAT,May,,,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+DOG,March,AM PIT BULL TER - MIX,,MALE,false,MED,BROWN,Impound,Other
+DOG,June,,Older than 1 year,MALE,true,SMALL,WHITE,Owner Surrender,Home
+DOG,March,BLACK/TAN HOUND - MIX,,MALE,false,PUPPY,BLACK,Stray,Other
+CAT,June,,,FEMALE,false,KITTN,BLACK,Stray,Other
+DOG,February,CHIHUAHUA SH - MIX,Youth - Younger than 1 year,MALE,true,PUPPY,WHITE,Owner Surrender,Home
+DOG,July,,Older than 1 year,FEMALE,true,TOY,BLACK,Stray,Home
+CAT,February,,,MALE,false,MED,WHITE,Stray,Euthanized
+DOG,June,CHIHUAHUA SH - MIX,Older than 1 year,FEMALE,true,TOY,TAN,Owner Surrender,Home
+CAT,July,,,MALE,false,MED,GRAY,Stray,Euthanized
+DOG,October,,Infant - Younger than 6 months,FEMALE,false,PUPPY,BLACK,Stray,Euthanized
+CAT,July,,,MALE,true,LARGE,BRN TABBY,Owner Surrender,Euthanized
+DOG,May,,Older than 1 year,MALE,true,SMALL,WHITE,Foster Return,Other
+DOG,August,,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Euthanized
+DOG,April,CHIHUAHUA SH - MIX,Older than 1 year,FEMALE,false,SMALL,BROWN,Stray,Other
+CAT,August,,Infant - Younger than 6 months,MALE,true,KITTN,BRN TABBY,Foster Return,Home
+DOG,November,,,UNKNOWN,false,LARGE,BLACK,Stray,Other
+CAT,January,,Older than 1 year,MALE,true,LARGE,ORANGE,Stray,Euthanized
+DOG,October,GERM SHEPHERD - MIX,Older than 1 year,FEMALE,false,LARGE,BROWN,Owner Surrender,Euthanized
+DOG,September,,Older than 1 year,FEMALE,false,LARGE,BR BRINDLE,Owner Surrender,Euthanized
+DOG,January,POODLE MIN - COCKER SPAN,Older than 7 years,FEMALE,false,SMALL,WHITE,Stray,Euthanized
+DOG,September,SHIH TZU - PURE BRED,Older than 7 years,FEMALE,true,MED,BLACK,Owner Surrender,Euthanized
+DOG,March,GERM SHEPHERD - MIX,Youth - Younger than 1 year,FEMALE,true,PUPPY,BROWN,Owner Surrender,Euthanized
+CAT,October,,,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+DOG,January,,,FEMALE,false,X-LRG,BROWN,Stray,Other
+DOG,December,AUST SHEPHERD - MIX,Youth - Younger than 1 year,FEMALE,false,MED,BROWN,Owner Surrender,Other
+CAT,February,,Older than 7 years,FEMALE,true,MED,WHITE,Owner Surrender,Euthanized
+CAT,June,,,FEMALE,false,KITTN,WHITE,Stray,Euthanized
+DOG,August,PUG - BEAGLE,Older than 7 years,FEMALE,true,SMALL,BROWN,Stray,Home
+CAT,July,,,FEMALE,false,KITTN,ORANGE,Stray,Euthanized
+CAT,May,,,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLACK,Foster Return,Home
+CAT,June,,,FEMALE,false,MED,BLACK,Stray,Other
+DOG,September,,Older than 1 year,MALE,false,MED,BROWN,Stray,Home
+DOG,June,,Youth - Younger than 1 year,FEMALE,true,PUPPY,YELLOW,Stray,Home
+CAT,May,,,MALE,false,KITTN,GRAY TABBY,Stray,Other
+CAT,July,,Infant - Younger than 6 months,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+DOG,February,LABRADOR RETR - MIX,Youth - Younger than 1 year,FEMALE,true,MED,BLACK,Stray,Other
+DOG,April,POODLE MIN - MALTESE,Older than 1 year,MALE,true,SMALL,WHITE,Stray,Other
+CAT,August,,,FEMALE,false,LARGE,ORG TABBY,Stray,Euthanized
+CAT,June,,,UNKNOWN,false,KITTN,WHITE,Stray,Euthanized
+DOG,February,GERM SHEPHERD - MIX,,MALE,false,LARGE,BLACK,Stray,Euthanized
+DOG,January,,,MALE,false,MED,TAN,Stray,Euthanized
+DOG,August,,,FEMALE,false,LARGE,BROWN,Stray,Euthanized
+DOG,April,,Older than 1 year,FEMALE,true,MED,BLACK,Stray,Home
+CAT,July,,Older than 1 year,MALE,true,LARGE,GRAY,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,ORANGE,Owner Surrender,Other
+DOG,July,BEAGLE - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,BLUE,Stray,Home
+DOG,September,,Older than 1 year,FEMALE,false,MED,BR BRINDLE,Stray,Home
+CAT,August,,Older than 7 years,MALE,true,X-LRG,BRN TABBY,Owner Surrender,Other
+DOG,February,,Older than 1 year,MALE,true,SMALL,BLACK,Stray,Home
+CAT,June,,Infant - Younger than 6 months,FEMALE,true,KITTN,BRN TABBY,Foster Return,Home
+DOG,January,,Infant - Younger than 6 months,FEMALE,false,PUPPY,BLACK,Foster Return,Other
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,TORTIE,Stray,Home
+CAT,January,,Infant - Younger than 6 months,MALE,true,KITTN,BLACK,Stray,Home
+CAT,September,DOMESTIC MH - MIX,,MALE,false,KITTN,BLACK,Stray,Euthanized
+CAT,February,,Older than 1 year,MALE,true,MED,BLACK,Stray,Home
+CAT,October,,,UNKNOWN,false,SMALL,GRAY,Stray,Euthanized
+CAT,April,,Older than 1 year,UNKNOWN,false,MED,BLACK,Owner Surrender,Euthanized
+CAT,June,,Infant - Younger than 6 months,MALE,false,MED,BRN TABBY,Stray,Euthanized
+DOG,April,POINTER - MIX,,MALE,false,PUPPY,BROWN,Owner Surrender,Other
+DOG,July,,,MALE,true,MED,BROWN,Owner Surrender,Home
+CAT,May,,,MALE,true,MED,BLACK,Owner Surrender,Euthanized
+DOG,August,,Older than 1 year,MALE,true,SMALL,BLACK,Owner Surrender,Home
+CAT,May,,,FEMALE,false,MED,TORTIE,Stray,Other
+CAT,September,,Infant - Younger than 6 months,FEMALE,false,KITTN,CALICO,Stray,Euthanized
+DOG,January,,Older than 7 years,MALE,true,TOY,FAWN,Owner Surrender,Home
+DOG,March,,Older than 1 year,MALE,false,MED,RED,Stray,Euthanized
+DOG,October,ROTTWEILER - MIX,Older than 1 year,FEMALE,false,LARGE,BLACK,Stray,Other
+CAT,May,,Infant - Younger than 6 months,MALE,false,KITTN,BLACK,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY TABBY,Owner Surrender,Euthanized
+CAT,September,,Older than 1 year,FEMALE,true,LARGE,GRAY,Owner Surrender,Euthanized
+CAT,April,,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Euthanized
+CAT,March,,,MALE,false,LARGE,BLACK,Stray,Euthanized
+DOG,October,,,FEMALE,false,MED,BLACK,Stray,Home
+DOG,September,,Older than 7 years,MALE,true,LARGE,RED,Stray,Home
+CAT,August,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLK SMOKE,Stray,Home
+CAT,September,,Infant - Younger than 6 months,FEMALE,false,KITTN,ORANGE,Stray,Euthanized
+CAT,December,SNOWSHOE - MIX,Infant - Younger than 6 months,FEMALE,true,KITTN,WHITE,Owner Surrender,Other
+CAT,February,,Older than 1 year,MALE,true,LARGE,ORG TABBY,Owner Surrender,Other
+CAT,October,,Older than 1 year,UNKNOWN,false,MED,GRAY,Stray,Euthanized
+CAT,August,,,FEMALE,false,LARGE,TORTIE,Stray,Euthanized
+DOG,February,LABRADOR RETR - GERM SHEPHERD,,FEMALE,false,LARGE,BLACK,Stray,Other
+CAT,February,,Infant - Younger than 6 months,MALE,true,SMALL,BLACK,Stray,Home
+CAT,July,,Infant - Younger than 6 months,MALE,false,KITTN,BRN TABBY,Stray,Other
+DOG,June,BEAGLE - MIX,Infant - Younger than 6 months,MALE,true,MED,BLACK,Stray,Home
+CAT,July,,,MALE,false,LARGE,BRN TABBY,Stray,Euthanized
+DOG,October,PIT BULL - MIX,Youth - Younger than 1 year,FEMALE,true,MED,BR BRINDLE,Stray,Home
+DOG,June,PUG - BASSET HOUND,Older than 1 year,MALE,false,SMALL,TAN,Stray,Euthanized
+CAT,March,DOMESTIC SH - DOMESTIC SH,Youth - Younger than 1 year,MALE,true,LARGE,BLACK,Owner Surrender,Home
+CAT,August,,Infant - Younger than 6 months,MALE,true,KITTN,GRAY,Stray,Other
+CAT,April,,Older than 1 year,FEMALE,true,MED,TORTIE,Foster Return,Home
+DOG,March,GERM SHEPHERD - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,BLACK,Foster Return,Home
+CAT,July,,Youth - Younger than 1 year,FEMALE,false,SMALL,GRAY,Owner Surrender,Euthanized
+DOG,April,GERM SHEPHERD - MIX,,MALE,false,LARGE,BROWN,Stray,Euthanized
+CAT,July,,,FEMALE,false,LARGE,GRAY,Stray,Other
+DOG,April,NEWFOUNDLAND - MIX,Older than 7 years,MALE,true,X-LRG,BLACK,Owner Surrender,Euthanized
+DOG,May,,Older than 1 year,FEMALE,true,MED,BROWN,Foster Return,Home
+CAT,May,,Infant - Younger than 6 months,FEMALE,false,KITTN,WHITE,Stray,Other
+DOG,January,,,MALE,false,MED,BROWN,Foster Return,Other
+DOG,February,BOSTON TERRIER - PUG,,MALE,true,MED,BL BRINDLE,Out Patient Spay or Neuter,Other
+DOG,April,,Older than 1 year,MALE,true,SMALL,WHITE,Owner Surrender,Home
+CAT,October,,Infant - Younger than 6 months,MALE,false,KITTN,GRAY TABBY,Stray,Other
+DOG,June,GERM SHEPHERD - CHOW CHOW,,FEMALE,true,LARGE,TAN,Owner Surrender,Other
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,GRAY,Owner Surrender,Euthanized
+CAT,May,SIAMESE - PURE BRED,Older than 7 years,MALE,true,MED,ORANGE,Owner Surrender,Euthanized
+DOG,October,GOLDEN RETR - BORDER COLLIE,Older than 7 years,FEMALE,false,LARGE,GOLD,Owner Surrender,Euthanized
+DOG,July,,,MALE,false,LARGE,BROWN,Impound,Other
+CAT,August,,Infant - Younger than 6 months,MALE,true,KITTN,GRAY,Foster Return,Home
+DOG,January,,Youth - Younger than 1 year,MALE,true,LARGE,BR BRINDLE,Stray,Other
+CAT,August,,,FEMALE,false,KITTN,BLACK,Stray,Euthanized
+CAT,October,,,MALE,false,KITTN,ORANGE,Stray,Other
+CAT,June,,,FEMALE,false,KITTN,BLK TABBY,Stray,Euthanized
+CAT,March,,Older than 1 year,FEMALE,true,MED,WHITE,Stray,Home
+CAT,May,,,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+CAT,October,,,MALE,true,LARGE,BLACK,Stray,Euthanized
+DOG,December,BOXER - MIX,Older than 1 year,MALE,true,LARGE,BROWN,Owner Surrender,Euthanized
+DOG,August,,,MALE,false,LARGE,UNKNOWN,Reported Lost by Public,Other
+DOG,August,,Older than 1 year,FEMALE,false,LARGE,BLACK,Impound,Home
+CAT,April,,,FEMALE,false,MED,ORANGE,Stray,Euthanized
+DOG,April,,Older than 7 years,MALE,false,MED,TRICOLOR,Owner Surrender,Euthanized
+DOG,April,,,FEMALE,false,MED,BLUE,Stray,Other
+DOG,December,,Older than 1 year,FEMALE,true,SMALL,FAWN,Owner Surrender,Home
+CAT,January,,Infant - Younger than 6 months,FEMALE,true,KITTN,BRN TABBY,Stray,Other
+DOG,August,,,FEMALE,false,TOY,UNKNOWN,Reported Lost by Public,Other
+DOG,July,,Older than 1 year,MALE,false,PUPPY,TAN,Stray,Euthanized
+CAT,June,,,UNKNOWN,false,KITTN,GRAY TIGER,Stray,Euthanized
+DOG,July,PIT BULL - BOXER,Older than 1 year,FEMALE,false,MED,GOLD,Owner Surrender,Euthanized
+CAT,May,,,UNKNOWN,false,KITTN,WHITE,Stray,Euthanized
+DOG,February,,Older than 7 years,FEMALE,true,SMALL,WHITE,Owner Surrender,Other
+DOG,August,,Older than 7 years,FEMALE,false,SMALL,BLACK,Owner Surrender,Euthanized
+DOG,January,,Older than 7 years,FEMALE,true,SMALL,BR BRINDLE,Stray,Home
+CAT,October,,,FEMALE,false,KITTN,GRAY,Stray,Euthanized
+CAT,November,,Youth - Younger than 1 year,FEMALE,false,MED,WHITE,Owner Surrender,Euthanized
+CAT,December,,Older than 1 year,FEMALE,false,MED,ORG TABBY,Stray,Euthanized
+CAT,August,,Infant - Younger than 6 months,MALE,true,KITTN,GRAY,Owner Surrender,Home
+DOG,March,SHIH TZU - CHIHUAHUA LH,Infant - Younger than 6 months,MALE,true,PUPPY,BLACK,Owner Surrender,Home
+CAT,March,,,MALE,false,MED,ORG TABBY,Stray,Other
+CAT,January,,,UNKNOWN,false,KITTN,ORG TABBY,Stray,Euthanized
+CAT,April,,,UNKNOWN,false,LARGE,WHITE,Stray,Euthanized
+DOG,August,,Older than 1 year,FEMALE,true,LARGE,BROWN,Stray,Other
+DOG,April,CHOW CHOW - MIX,,MALE,false,MED,BROWN,Owner Surrender,Euthanized
+DOG,June,,,MALE,true,SMALL,BROWN,Stray,Home
+CAT,June,,,FEMALE,false,KITTN,BLK TABBY,Stray,Euthanized
+DOG,February,,,FEMALE,false,MED,BLUE,Stray,Other
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLACK,Stray,Other
+CAT,May,,,UNKNOWN,false,KITTN,BLACK,Stray,Other
+DOG,May,,Older than 1 year,FEMALE,true,MED,WHITE,Stray,Home
+CAT,December,,Youth - Younger than 1 year,FEMALE,true,SMALL,BRN TABBY,Owner Surrender,Other
+DOG,November,,Older than 7 years,MALE,true,SMALL,GRAY,Owner Surrender,Home
+DOG,March,BEAGLE - MIX,,MALE,false,MED,BLACK,Stray,Other
+DOG,November,,Older than 1 year,FEMALE,true,SMALL,BROWN,Owner Surrender,Other
+CAT,June,,Infant - Younger than 6 months,MALE,true,KITTN,BRN TABBY,Owner Surrender,Home
+CAT,April,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY TABBY,Owner Surrender,Other
+DOG,July,,Youth - Younger than 1 year,MALE,true,LARGE,GRAY,Owner Surrender,Other
+DOG,July,BLOODHOUND - MIX,Youth - Younger than 1 year,MALE,true,PUPPY,BROWN,Stray,Home
+CAT,December,,Infant - Younger than 6 months,MALE,true,KITTN,GRAY,Foster Return,Home
+DOG,June,,,MALE,false,MED,BROWN,Stray,Euthanized
+DOG,January,LABRADOR RETR - SIBERIAN HUSKY,Older than 1 year,MALE,true,LARGE,BLACK,Owner Surrender,Home
+CAT,January,MAINE COON - MIX,,UNKNOWN,false,X-LRG,BRN TABBY,Stray,Euthanized
+DOG,January,CHOW CHOW - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,BLACK,Owner Surrender,Home
+CAT,December,,,MALE,false,KITTN,BRN TABBY,Stray,Euthanized
+DOG,April,RHOD RIDGEBACK - MIX,Youth - Younger than 1 year,FEMALE,false,MED,BROWN,Stray,Other
+DOG,April,,Older than 1 year,MALE,true,SMALL,FAWN,Owner Surrender,Other
+DOG,March,,Youth - Younger than 1 year,FEMALE,true,MED,BLUE MERLE,Stray,Home
+DOG,May,,,FEMALE,false,SMALL,BLACK,Stray,Other
+DOG,August,,Older than 1 year,MALE,false,LARGE,BLACK,Stray,Home
+DOG,July,,Older than 1 year,MALE,false,MED,CREAM,Stray,Euthanized
+CAT,December,,Older than 1 year,FEMALE,true,LARGE,BRN TIGER,Owner Surrender,Home
+CAT,April,,Older than 1 year,FEMALE,true,MED,WHITE,Owner Surrender,Home
+CAT,July,,Infant - Younger than 6 months,FEMALE,false,KITTN,BUFF,Stray,Euthanized
+CAT,September,,Infant - Younger than 6 months,FEMALE,false,SMALL,WHITE,Stray,Other
+DOG,July,,Youth - Younger than 1 year,FEMALE,true,PUPPY,BLACK,Stray,Other
+DOG,April,,Infant - Younger than 6 months,FEMALE,false,PUPPY,BLUE,Stray,Other
+DOG,February,,Older than 1 year,MALE,true,SMALL,WHITE,Stray,Home
+CAT,June,,Infant - Younger than 6 months,MALE,false,KITTN,ORG TABBY,Stray,Other
+DOG,April,SHIH TZU - MIX,,FEMALE,false,MED,GRAY,Owner Surrender,Euthanized
+CAT,July,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY TIGER,Foster Return,Home
+CAT,June,,,MALE,false,MED,WHITE,Stray,Euthanized
+DOG,August,,Older than 1 year,MALE,true,MED,BLUE,Foster Return,Home
+CAT,August,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+CAT,February,,Older than 1 year,MALE,true,MED,BLACK,Stray,Home
+DOG,February,BEAGLE - MIX,Older than 1 year,FEMALE,true,MED,WHITE,Owner Surrender,Home
+CAT,August,,Older than 1 year,FEMALE,true,LARGE,BRN TABBY,Owner Surrender,Euthanized
+DOG,September,,,MALE,false,SMALL,BLACK,Stray,Euthanized
+DOG,May,GERM SHEPHERD - ROTTWEILER,Older than 1 year,MALE,true,PUPPY,BLACK,Owner Surrender,Home
+DOG,August,,,MALE,false,MED,UNKNOWN,Reported Lost by Public,Other
+DOG,June,AFFENPINSCHER - MIX,Older than 1 year,FEMALE,true,SMALL,BLACK,Owner Surrender,Home
+DOG,April,,Older than 1 year,FEMALE,true,SMALL,GRAY,Stray,Home
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,BLACK,Owner Surrender,Euthanized
+CAT,October,,,MALE,false,KITTN,BRN TABBY,Stray,Euthanized
+DOG,February,,Youth - Younger than 1 year,FEMALE,true,TOY,BLACK,Out Patient Spay or Neuter,Other
+CAT,January,,Older than 1 year,MALE,false,MED,BLACK,Stray,Other
+DOG,August,BOSTON TERRIER - POINTER,Older than 1 year,MALE,true,MED,BLACK,Stray,Home
+DOG,February,,Older than 7 years,MALE,true,MED,BROWN,Owner Surrender,Other
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,CALICO,Stray,Other
+DOG,June,,Older than 1 year,MALE,true,TOY,BLACK,Stray,Home
+DOG,April,,Older than 1 year,FEMALE,true,SMALL,WHITE,Out Patient Spay or Neuter,Other
+CAT,August,,Older than 1 year,FEMALE,false,MED,GRAY,Owner Surrender,Euthanized
+DOG,December,,Older than 1 year,MALE,false,LARGE,YELLOW,Stray,Other
+DOG,June,AUST CATTLE DOG - MIX,Older than 1 year,MALE,true,MED,WHITE,Stray,Other
+DOG,October,GERM SHEPHERD - ROTTWEILER,Older than 1 year,MALE,true,LARGE,BLACK,Stray,Other
+DOG,January,,Youth - Younger than 1 year,MALE,true,LARGE,BLACK,Owner Surrender,Home
+CAT,April,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BLK TABBY,Stray,Euthanized
+CAT,May,,,UNKNOWN,false,LARGE,GRAY TIGER,Stray,Other
+DOG,May,,,FEMALE,true,MED,BLUE MERLE,Stray,Other
+CAT,May,,,FEMALE,false,MED,TORTIE,Stray,Euthanized
+CAT,June,,Infant - Younger than 6 months,FEMALE,false,KITTN,CREAM,Stray,Other
+CAT,June,SIAMESE - MIX,Infant - Younger than 6 months,MALE,true,KITTN,SEAL PT,Foster Return,Home
+CAT,November,,Infant - Younger than 6 months,FEMALE,false,KITTN,CALICO,Stray,Euthanized
+CAT,February,,Older than 1 year,FEMALE,true,MED,BRN TABBY,Stray,Home
+DOG,August,BEAGLE - MIX,Older than 1 year,FEMALE,true,MED,TRICOLOR,Stray,Home
+CAT,January,,,FEMALE,false,MED,GRAY TABBY,Owner Surrender,Euthanized
+CAT,February,DOMESTIC SH - DOMESTIC SH,Older than 1 year,MALE,false,MED,BLK TIGER,Owner Surrender,Euthanized
+CAT,April,,,MALE,false,LARGE,ORANGE,Stray,Euthanized
+DOG,September,,Older than 1 year,FEMALE,false,X-LRG,WHITE,Stray,Home
+DOG,February,,Older than 7 years,FEMALE,true,MED,BLACK,Owner Surrender,Euthanized
+DOG,November,,Older than 7 years,FEMALE,false,MED,BLACK,Stray,Euthanized
+CAT,September,DOMESTIC SH - MIX,Older than 7 years,FEMALE,true,MED,GRAY,Owner Surrender,Euthanized
+CAT,February,,,UNKNOWN,false,MED,GRAY,Stray,Euthanized
+CAT,September,,Infant - Younger than 6 months,MALE,false,KITTN,CRM TABBY,Stray,Euthanized
+DOG,March,,Older than 1 year,FEMALE,false,MED,TAN,Stray,Euthanized
+DOG,March,,Older than 1 year,MALE,true,MED,WHITE,Stray,Home
+DOG,June,,Older than 1 year,MALE,true,LARGE,TAN,Owner Surrender,Other
+CAT,July,,,MALE,false,MED,BLACK,Owner Surrender,Euthanized
+DOG,January,JACK RUSS TER - CHIHUAHUA SH,Youth - Younger than 1 year,MALE,true,PUPPY,WHITE,Owner Surrender,Home
+DOG,August,,Older than 1 year,MALE,true,X-LRG,BROWN,Stray,Home
+CAT,June,,Older than 1 year,FEMALE,false,MED,CALICO PT,Owner Surrender,Euthanized
+CAT,January,,,FEMALE,false,LARGE,BRN TABBY,Stray,Euthanized
+DOG,April,,Older than 1 year,MALE,false,SMALL,WHITE,Owner Surrender,Other
+CAT,June,,,FEMALE,false,MED,BUFF,Stray,Euthanized
+CAT,July,MAINE COON - MIX,Older than 1 year,FEMALE,true,MED,BROWN,Stray,Home
+CAT,September,,,FEMALE,false,KITTN,GRAY TIGER,Owner Surrender,Other
+DOG,April,SHIH TZU - MIX,,FEMALE,true,SMALL,WHITE,Stray,Home
+DOG,August,BEAGLE - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,BROWN,Stray,Other
+CAT,April,,,MALE,false,SMALL,ORG TABBY,Stray,Other
+CAT,September,,Infant - Younger than 6 months,MALE,false,KITTN,ORG TABBY,Stray,Euthanized
+CAT,December,,Youth - Younger than 1 year,MALE,false,MED,ORG TABBY,Stray,Euthanized
+CAT,October,,Older than 7 years,FEMALE,true,LARGE,WHITE,Owner Surrender,Euthanized
+CAT,June,,Infant - Younger than 6 months,FEMALE,true,KITTN,CALICO,Owner Surrender,Home
+CAT,October,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY TABBY,Stray,Other
+CAT,October,,Infant - Younger than 6 months,FEMALE,false,KITTN,GRAY TABBY,Stray,Other
+CAT,June,,,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+CAT,April,,Infant - Younger than 6 months,FEMALE,false,KITTN,BRN TABBY,Stray,Other
+CAT,August,,Infant - Younger than 6 months,MALE,false,KITTN,BLACK,Stray,Euthanized
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,GRAY,Stray,Euthanized
+CAT,September,,Infant - Younger than 6 months,MALE,false,KITTN,WHITE,Stray,Other
+CAT,November,,,UNKNOWN,false,KITTN,WHITE,Stray,Euthanized
+DOG,December,POINTER - MIX,Infant - Younger than 6 months,FEMALE,false,PUPPY,WHITE,Stray,Other
+CAT,May,,Older than 1 year,MALE,false,LARGE,ORG TABBY,Owner Surrender,Euthanized
+DOG,February,CAIRN TERRIER - PBGV,Older than 1 year,FEMALE,true,PUPPY,BR BRINDLE,Stray,Home
+DOG,May,BICHON FRISE - MIX,Youth - Younger than 1 year,MALE,true,SMALL,WHITE,Owner Surrender,Home
+DOG,February,BEAGLE - BORDER COLLIE,Older than 7 years,FEMALE,false,MED,TRICOLOR,Owner Surrender,Euthanized
+DOG,September,COONHOUND - PURE BRED,Older than 7 years,MALE,true,MED,RED,Owner Surrender,Euthanized
+CAT,March,,Infant - Younger than 6 months,MALE,true,SMALL,GRAY TABBY,Stray,Other
+CAT,September,,Older than 1 year,FEMALE,false,MED,CALICO PT,Stray,Euthanized
+DOG,May,GREYHOUND - MIX,Older than 1 year,FEMALE,true,LARGE,WHITE,Stray,Home
+DOG,December,,,FEMALE,true,MED,WHITE,Stray,Euthanized
+DOG,January,,Older than 1 year,MALE,true,LARGE,BLACK,Stray,Home
+CAT,September,,,UNKNOWN,false,KITTN,CALICO,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,BLACK,Stray,Home
+CAT,June,,Infant - Younger than 6 months,FEMALE,false,KITTN,ORG TABBY,Stray,Other
+CAT,August,,Infant - Younger than 6 months,MALE,false,KITTN,ORANGE,Owner Surrender,Euthanized
+DOG,August,,,MALE,false,,UNKNOWN,Reported Lost by Public,Other
+DOG,April,PIT BULL - MIX,Youth - Younger than 1 year,FEMALE,true,PUPPY,BLACK,Stray,Home
+CAT,May,,Infant - Younger than 6 months,MALE,false,KITTN,BLACK,Stray,Euthanized
+DOG,January,,,MALE,false,PUPPY,WHITE,Stray,Other
+CAT,April,,Older than 1 year,FEMALE,true,SMALL,CALICO,Foster Return,Home
+CAT,December,,Older than 1 year,FEMALE,false,MED,GRAY TABBY,Stray,Euthanized
+DOG,January,DALMATIAN - PIT BULL,Youth - Younger than 1 year,MALE,true,LARGE,WHITE,Owner Surrender,Euthanized
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLACK,Foster Return,Home
+CAT,March,,,FEMALE,false,LARGE,BRN TIGER,Stray,Other
+CAT,March,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLACK,Stray,Other
+CAT,January,DOMESTIC SH - SIAMESE,Older than 1 year,FEMALE,false,X-LRG,CALICO,Stray,Euthanized
+DOG,April,DACHSHUND - BEAGLE,Youth - Younger than 1 year,FEMALE,false,SMALL,BLACK,Owner Surrender,Other
+CAT,September,,Infant - Younger than 6 months,FEMALE,true,KITTN,BRN TABBY,Owner Surrender,Home
+CAT,July,,Older than 7 years,FEMALE,false,MED,CALICO,Stray,Euthanized
+CAT,January,,,UNKNOWN,false,MED,CALICO,Owner Surrender,Euthanized
+DOG,June,LABRADOR RETR - MIX,,FEMALE,false,PUPPY,BLACK,Owner Surrender,Other
+DOG,May,BOXER - PIT BULL,,FEMALE,false,SMALL,TAN,Stray,Euthanized
+CAT,August,,,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+CAT,August,,Infant - Younger than 6 months,MALE,false,SMALL,ORG TABBY,Stray,Euthanized
+CAT,May,,,FEMALE,false,SMALL,TORTIE,Stray,Euthanized
+CAT,July,,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Other
+DOG,June,,Older than 1 year,FEMALE,true,MED,BROWN,Stray,Home
+DOG,November,ROTTWEILER - MIX,,MALE,false,LARGE,BLACK,Impound,Euthanized
+DOG,March,,Older than 7 years,FEMALE,false,MED,BLACK,Stray,Other
+DOG,August,PIT BULL - GERM SHEPHERD,Older than 1 year,FEMALE,true,LARGE,BLACK,Owner Surrender,Other
+CAT,April,,,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+CAT,April,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY TABBY,Stray,Home
+DOG,September,,Older than 1 year,FEMALE,false,SMALL,CHOCOLATE,Stray,Other
+DOG,June,,Older than 1 year,MALE,true,LARGE,BLACK,Owner Surrender,Other
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,BLK TABBY,Stray,Home
+CAT,June,,,MALE,false,KITTN,GRAY,Owner Surrender,Euthanized
+CAT,September,,,MALE,false,KITTN,ORANGE,Stray,Euthanized
+DOG,June,,Older than 1 year,FEMALE,false,MED,TAN,Stray,Euthanized
+CAT,May,,,UNKNOWN,false,MED,ORG TABBY,Stray,Other
+DOG,August,,Older than 7 years,MALE,false,LARGE,BLACK,Owner Surrender,Euthanized
+CAT,April,,,UNKNOWN,false,KITTN,WHITE,Stray,Other
+CAT,August,,,FEMALE,false,LARGE,BRN TABBY,Stray,Euthanized
+DOG,March,COLLIE SMOOTH - MIX,Older than 1 year,MALE,false,LARGE,BROWN,Owner Surrender,Euthanized
+DOG,July,,Older than 1 year,FEMALE,true,MED,BROWN,Owner Surrender,Euthanized
+DOG,August,GERM SHEPHERD - MIX,Youth - Younger than 1 year,MALE,true,MED,RED,Owner Surrender,Other
+DOG,July,,Older than 1 year,MALE,false,LARGE,BROWN,Owner Surrender,Euthanized
+DOG,May,,Infant - Younger than 6 months,MALE,true,PUPPY,BLACK,Foster Return,Home
+DOG,August,,Older than 1 year,FEMALE,true,MED,BLACK,Owner Surrender,Home
+CAT,April,,,FEMALE,false,SMALL,BRN TABBY,Owner Surrender,Euthanized
+CAT,February,,Older than 1 year,FEMALE,true,MED,BUFF,Owner Surrender,Home
+CAT,July,,Infant - Younger than 6 months,FEMALE,false,KITTN,BRN TABBY,Stray,Home
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY TABBY,Foster Return,Home
+DOG,April,,,MALE,false,MED,TAN,Impound,Other
+DOG,May,POINTER - MIX,Infant - Younger than 6 months,FEMALE,false,MED,TAN,Stray,Other
+CAT,September,,,MALE,true,LARGE,WHITE,Stray,Euthanized
+CAT,April,,Older than 1 year,FEMALE,true,MED,GRAY,Foster Return,Home
+CAT,November,,,FEMALE,false,LARGE,GRAY TABBY,Owner Surrender,Euthanized
+CAT,October,,,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+CAT,August,,Older than 1 year,MALE,true,MED,BRN TIGER,Stray,Other
+CAT,February,,Older than 1 year,MALE,true,MED,BLACK,Out Patient Spay or Neuter,Other
+CAT,June,,Older than 1 year,FEMALE,false,MED,GRAY,Stray,Euthanized
+DOG,November,POODLE MIN - SHIH TZU,Older than 1 year,MALE,true,SMALL,BLACK,Stray,Home
+DOG,September,,Youth - Younger than 1 year,FEMALE,true,MED,WHITE,Stray,Home
+CAT,January,,,FEMALE,false,MED,TORTIE,Stray,Euthanized
+DOG,May,SIBERIAN HUSKY - MIX,Older than 1 year,MALE,true,MED,TAN,Stray,Home
+DOG,August,,Older than 7 years,MALE,true,LARGE,BROWN,Owner Surrender,Euthanized
+CAT,March,,,UNKNOWN,false,LARGE,GRAY,Stray,Euthanized
+CAT,April,,,FEMALE,false,KITTN,GRAY TABBY,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,FEMALE,false,KITTN,BLACK,Foster Return,Other
+CAT,January,,Older than 1 year,MALE,false,SMALL,BLACK,Stray,Euthanized
+CAT,February,,Older than 1 year,FEMALE,false,MED,GRAY,Stray,Euthanized
+DOG,July,,Infant - Younger than 6 months,MALE,false,SMALL,BLACK,Owner Surrender,Other
+DOG,February,BELG MALINOIS - AKITA,Older than 1 year,MALE,true,LARGE,BLACK,Owner Surrender,Euthanized
+CAT,March,,,MALE,false,LARGE,ORANGE,Stray,Euthanized
+CAT,February,,,UNKNOWN,false,LARGE,BLK TABBY,Stray,Euthanized
+CAT,April,,,UNKNOWN,false,SMALL,BLK TABBY,Stray,Euthanized
+DOG,August,,Older than 1 year,MALE,false,MED,BROWN,Stray,Euthanized
+DOG,January,,Older than 1 year,MALE,true,SMALL,BROWN,Stray,Home
+DOG,June,CHIHUAHUA SH - MIX,,FEMALE,false,TOY,TAN,Stray,Other
+DOG,July,,Older than 7 years,MALE,false,LARGE,BROWN,Owner Surrender,Euthanized
+CAT,November,,,FEMALE,false,SMALL,GRAY TABBY,Owner Surrender,Other
+DOG,March,BORDER COLLIE - MIX,Older than 7 years,MALE,false,LARGE,BLACK,Owner Surrender,Euthanized
+CAT,September,,Infant - Younger than 6 months,MALE,false,KITTN,ORANGE,Stray,Euthanized
+DOG,June,MIN PINSCHER - MIX,,FEMALE,false,SMALL,BROWN,Stray,Other
+CAT,October,,Older than 7 years,MALE,true,X-LRG,BUFF,Stray,Home
+DOG,September,,Infant - Younger than 6 months,MALE,false,PUPPY,BROWN,Stray,Other
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY,Stray,Home
+DOG,January,GERM SHEPHERD - MIX,Older than 1 year,MALE,true,LARGE,BROWN,Stray,Home
+CAT,August,,Older than 1 year,MALE,true,X-LRG,BLACK,Owner Surrender,Home
+DOG,June,,Older than 1 year,MALE,true,MED,TAN,Stray,Home
+DOG,December,AUST SHEPHERD - MIX,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Other
+CAT,July,,,FEMALE,false,MED,BRN TABBY,Stray,Euthanized
+CAT,August,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY,Foster Return,Home
+CAT,November,,Older than 1 year,FEMALE,true,LARGE,GRAY TABBY,Owner Surrender,Euthanized
+CAT,March,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,WHITE,Owner Surrender,Other
+DOG,August,SHIH TZU - YORKSHIRE TERR,Older than 1 year,FEMALE,true,SMALL,WHITE,Stray,Home
+DOG,January,LABRADOR RETR - SIBERIAN HUSKY,,MALE,true,LARGE,YELLOW,Stray,Home
+CAT,May,,Older than 1 year,FEMALE,true,SMALL,TORTIE,Out Patient Spay or Neuter,Other
+CAT,November,,,MALE,false,LARGE,GRAY,Stray,Euthanized
+CAT,September,,Older than 1 year,MALE,false,MED,ORANGE,Stray,Euthanized
+CAT,May,,,FEMALE,false,MED,GRAY,Stray,Other
+DOG,June,BEAGLE - DACHSHUND,Older than 1 year,MALE,true,SMALL,BROWN,Owner Surrender,Other
+CAT,May,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY,Stray,Other
+CAT,August,,,FEMALE,false,MED,GRAY TABBY,Owner Surrender,Euthanized
+CAT,November,,Infant - Younger than 6 months,FEMALE,true,SMALL,GRAY TIGER,Stray,Home
+DOG,June,BOXER - MIX,Older than 1 year,FEMALE,true,MED,BROWN,Stray,Other
+DOG,September,,Older than 1 year,FEMALE,true,MED,TRICOLOR,Stray,Home
+CAT,July,,,FEMALE,true,MED,BLACK,Stray,Other
+DOG,January,,Older than 1 year,MALE,true,LARGE,WHITE,Stray,Home
+CAT,June,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLACK,Owner Surrender,Home
+DOG,July,,,FEMALE,false,SMALL,UNKNOWN,Reported Lost by Public,Other
+CAT,March,,Older than 1 year,MALE,true,MED,BLACK,Stray,Home
+DOG,January,,Older than 1 year,MALE,false,MED,TRICOLOR,Stray,Other
+DOG,May,,,FEMALE,true,MED,BLACK,Stray,Home
+DOG,September,ITAL GREYHOUND - RAT TERRIER,Youth - Younger than 1 year,MALE,true,SMALL,BLUE,Foster Return,Home
+CAT,October,,,MALE,false,X-LRG,BRN TABBY,Owner Surrender,Euthanized
+CAT,April,,,UNKNOWN,false,MED,GRAY TABBY,Stray,Home
+DOG,August,,Older than 1 year,MALE,true,SMALL,WHITE,Owner Surrender,Home
+CAT,September,,,FEMALE,false,KITTN,GRAY TABBY,Owner Surrender,Euthanized
+DOG,March,,Older than 1 year,MALE,true,LARGE,BLACK,Stray,Home
+DOG,July,,Older than 1 year,FEMALE,true,MED,WHITE,Stray,Other
+DOG,June,,Older than 7 years,MALE,true,MED,BLACK,Owner Surrender,Euthanized
+DOG,June,,Older than 1 year,MALE,true,X-LRG,BLACK,Stray,Home
+DOG,July,,Older than 1 year,MALE,true,MED,BROWN,Foster Return,Home
+CAT,June,,,FEMALE,false,MED,BLACK,Stray,Euthanized
+DOG,January,BEAGLE - MIX,Infant - Younger than 6 months,MALE,false,PUPPY,TRICOLOR,Owner Surrender,Other
+DOG,September,,Older than 1 year,MALE,true,SMALL,TRICOLOR,Owner Surrender,Home
+DOG,July,ENG COCKER SPAN - BEAGLE,Older than 1 year,MALE,true,MED,BLACK,Owner Surrender,Other
+DOG,April,BORDER COLLIE - MIX,Infant - Younger than 6 months,FEMALE,true,SMALL,BLACK,Stray,Home
+DOG,August,,,FEMALE,false,LARGE,BR BRINDLE,Stray,Euthanized
+DOG,April,DACHSHUND - PURE BRED,Older than 7 years,FEMALE,true,MED,BLACK,Owner Surrender,Euthanized
+CAT,August,,,FEMALE,false,MED,ORG TABBY,Stray,Euthanized
+DOG,March,GERM SHEPHERD - COLLIE ROUGH,,MALE,false,PUPPY,BLACK,Stray,Other
+DOG,October,JACK RUSS TER - BASENJI,Older than 7 years,FEMALE,false,SMALL,WHITE,Stray,Euthanized
+CAT,March,,Infant - Younger than 6 months,MALE,false,KITTN,ORG TABBY,Stray,Other
+CAT,February,DOMESTIC LH - DOMESTIC LH,,FEMALE,true,MED,TORTIE,Owner Surrender,Euthanized
+CAT,July,,,FEMALE,false,MED,CALICO,Owner Surrender,Euthanized
+DOG,February,LABRADOR RETR - BORDER COLLIE,Older than 1 year,MALE,true,MED,BLACK,Owner Surrender,Home
+DOG,December,,,MALE,true,MED,WHITE,Stray,Home
+DOG,June,,,MALE,false,SMALL,BLACK,Stray,Other
+CAT,June,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+DOG,March,,,FEMALE,true,SMALL,BLACK,Stray,Home
+DOG,December,GERM SHEPHERD - MIX,Youth - Younger than 1 year,FEMALE,false,MED,BLACK,Impound,Euthanized
+CAT,September,,Infant - Younger than 6 months,MALE,false,KITTN,BLK SMOKE,Stray,Other
+CAT,August,,,UNKNOWN,false,MED,CREAM,Disposal Request by Public,Other
+DOG,May,PIT BULL - MIX,Youth - Younger than 1 year,FEMALE,false,MED,BROWN,Owner Surrender,Euthanized
+CAT,September,,,UNKNOWN,false,KITTN,GRAY,Stray,Euthanized
+DOG,July,,,MALE,true,LARGE,BLACK,Stray,Home
+DOG,June,,Youth - Younger than 1 year,MALE,true,MED,TRICOLOR,Owner Surrender,Home
+DOG,March,,,MALE,true,MED,BR BRINDLE,Stray,Home
+CAT,August,,Older than 1 year,UNKNOWN,false,LARGE,BRN TABBY,Stray,Other
+DOG,September,SHIH TZU - MIX,Older than 1 year,MALE,true,SMALL,WHITE,Stray,Home
+CAT,September,,,MALE,false,KITTN,GRAY,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,FEMALE,false,KITTN,BLACK,Owner Surrender,Euthanized
+CAT,July,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY TABBY,Owner Surrender,Euthanized
+CAT,January,,Older than 1 year,MALE,true,MED,ORANGE,Stray,Home
+DOG,November,GERM SHEPHERD - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,BROWN,Foster Return,Home
+CAT,July,,,UNKNOWN,false,MED,GRAY TABBY,Stray,Euthanized
+DOG,December,,Youth - Younger than 1 year,FEMALE,true,MED,TAN,Owner Surrender,Other
+DOG,November,LABRADOR RETR - MIX,Older than 1 year,MALE,false,LARGE,WHITE,Stray,Euthanized
+CAT,June,,Infant - Younger than 6 months,MALE,true,KITTN,ORG TABBY,Foster Return,Home
+DOG,January,,Infant - Younger than 6 months,FEMALE,true,PUPPY,BLACK,Stray,Home
+CAT,December,,Older than 1 year,MALE,true,LARGE,BRN TABBY,Stray,Other
+DOG,September,,Older than 1 year,FEMALE,true,SMALL,BLACK,Owner Surrender,Euthanized
+CAT,May,,,FEMALE,false,LARGE,GRAY,Stray,Euthanized
+DOG,January,,Older than 1 year,MALE,true,X-LRG,BLACK,Stray,Other
+CAT,July,,Older than 1 year,MALE,false,LARGE,WHITE,Stray,Euthanized
+DOG,May,,,MALE,false,LARGE,YELLOW,Impound,Other
+DOG,January,,,MALE,false,LARGE,BR BRINDLE,Owner Surrender,Euthanized
+DOG,November,,Infant - Younger than 6 months,MALE,false,PUPPY,BROWN,Stray,Other
+CAT,February,,,MALE,false,MED,GRAY TABBY,Stray,Euthanized
+DOG,January,CHIHUAHUA SH - DACHSHUND,Older than 1 year,FEMALE,true,SMALL,TAN,Owner Surrender,Home
+DOG,June,,,MALE,false,SMALL,UNKNOWN,Reported Lost by Public,Other
+CAT,October,,,FEMALE,true,MED,GRAY,Stray,Other
+DOG,March,BEAGLE - MIX,Older than 1 year,FEMALE,true,MED,TRICOLOR,Stray,Home
+DOG,March,PIT BULL - MIX,,FEMALE,false,MED,GRAY,Stray,Euthanized
+CAT,June,,Infant - Younger than 6 months,MALE,true,KITTN,BLACK,Owner Surrender,Home
+CAT,November,,,UNKNOWN,false,KITTN,GRAY,Stray,Other
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,ORG TABBY,Stray,Home
+DOG,July,,Older than 1 year,FEMALE,false,LARGE,WHITE,Stray,Other
+CAT,July,,Older than 1 year,FEMALE,false,SMALL,BLACK,Owner Surrender,Euthanized
+DOG,December,,,MALE,false,LARGE,BROWN,Owner Surrender,Euthanized
+CAT,May,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BLACK,Owner Surrender,Euthanized
+CAT,June,,,UNKNOWN,false,MED,GRAY,Stray,Home
+DOG,July,,Older than 1 year,FEMALE,true,SMALL,WHITE,Stray,Home
+CAT,March,,,FEMALE,false,MED,WHITE,Stray,Euthanized
+CAT,March,,,UNKNOWN,false,KITTN,WHITE,Stray,Euthanized
+DOG,August,,,MALE,true,LARGE,BLACK,Owner Surrender,Euthanized
+DOG,March,,Older than 7 years,MALE,true,MED,,Owner Surrender,Euthanized
+CAT,February,,,MALE,true,LARGE,BLACK,Stray,Euthanized
+DOG,December,,Older than 1 year,MALE,true,MED,WHITE,Stray,Other
+CAT,April,,,UNKNOWN,false,SMALL,GRAY,Stray,Euthanized
+DOG,March,,,MALE,false,LARGE,BLACK,Impound,Other
+CAT,April,,Youth - Younger than 1 year,FEMALE,true,SMALL,TRICOLOR,Out Patient Spay or Neuter,Other
+DOG,October,PIT BULL - MIX,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Home
+CAT,July,,,FEMALE,false,MED,TORTIE,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,ORG TABBY,Stray,Home
+DOG,July,,Older than 1 year,FEMALE,true,SMALL,RED,Stray,Other
+DOG,May,BLACK/TAN HOUND - PLOTT HOUND,Older than 1 year,MALE,true,LARGE,BR BRINDLE,Stray,Other
+CAT,August,,,FEMALE,false,KITTN,BLACK,Stray,Euthanized
+DOG,May,PIT BULL - MIX,,FEMALE,false,LARGE,BR BRINDLE,Impound,Euthanized
+DOG,June,ROTTWEILER - MIX,Infant - Younger than 6 months,MALE,false,PUPPY,BLACK,Owner Surrender,Other
+CAT,June,,,UNKNOWN,false,SMALL,BRN TABBY,Stray,Euthanized
+DOG,September,,,MALE,false,SMALL,CHOCOLATE,Stray,Euthanized
+DOG,January,POODLE MIN - MIX,,FEMALE,false,SMALL,WHITE,Foster Return,Other
+DOG,March,LHASA APSO - MIX,Older than 7 years,FEMALE,true,MED,BROWN,Owner Surrender,Other
+DOG,July,,Older than 1 year,MALE,true,LARGE,BROWN,Owner Surrender,Home
+DOG,January,,,MALE,false,MED,WHITE,Stray,Other
+CAT,June,,,MALE,true,LARGE,BLACK,Stray,Euthanized
+DOG,January,,Older than 7 years,FEMALE,true,SMALL,WHITE,Stray,Home
+CAT,March,,Infant - Younger than 6 months,MALE,false,KITTN,BLACK,Owner Surrender,Other
+CAT,February,,,MALE,false,MED,BRN TABBY,Stray,Euthanized
+DOG,July,GERM SHEPHERD - PURE BRED,Older than 7 years,MALE,false,MED,BLACK,Owner Surrender,Euthanized
+DOG,February,,Older than 1 year,MALE,true,MED,WHITE,Owner Surrender,Home
+CAT,July,,,FEMALE,false,MED,ORANGE,Stray,Euthanized
+CAT,June,,,FEMALE,false,KITTN,GRAY,Stray,Euthanized
+DOG,June,CHOW CHOW - MIX,Older than 1 year,FEMALE,true,MED,BROWN,Owner Surrender,Home
+CAT,April,,Infant - Younger than 6 months,FEMALE,true,KITTN,BRN TABBY,Owner Surrender,Home
+DOG,July,,Older than 1 year,MALE,true,MED,BROWN,Stray,Euthanized
+CAT,July,,Youth - Younger than 1 year,FEMALE,false,MED,ORG TABBY,Stray,Euthanized
+CAT,April,,,UNKNOWN,false,MED,BUFF,Stray,Euthanized
+CAT,September,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BRN TABBY,Owner Surrender,Euthanized
+CAT,January,,,UNKNOWN,false,LARGE,GRAY TABBY,Stray,Euthanized
+CAT,August,,,UNKNOWN,false,KITTN,BLK TABBY,Owner Surrender,Euthanized
+CAT,October,,,MALE,false,MED,GRAY,Owner Surrender,Euthanized
+CAT,April,,Infant - Younger than 6 months,FEMALE,true,MED,WHITE,Owner Surrender,Home
+DOG,December,PIT BULL - BOXER,Older than 1 year,FEMALE,false,LARGE,BROWN,Stray,Euthanized
+CAT,September,,Older than 1 year,FEMALE,false,MED,TORTIE,Stray,Euthanized
+DOG,April,BEAGLE - MIX,,MALE,false,MED,BROWN,Stray,Euthanized
+DOG,July,,Older than 1 year,MALE,false,LARGE,CHOCOLATE,Stray,Euthanized
+DOG,June,LABRADOR RETR - MIX,Older than 1 year,FEMALE,true,MED,BLACK,Owner Surrender,Home
+DOG,May,,Older than 1 year,FEMALE,true,SMALL,WHITE,Stray,Home
+DOG,October,FLAT COAT RETR - MIX,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Other
+CAT,October,,Older than 1 year,FEMALE,false,MED,TORTIE,Stray,Other
+CAT,July,,Infant - Younger than 6 months,FEMALE,false,KITTN,BRN TABBY,Stray,Other
+CAT,January,,Infant - Younger than 6 months,MALE,false,KITTN,ORG TABBY,Stray,Other
+DOG,November,,Youth - Younger than 1 year,MALE,true,MED,BLUE,Owner Surrender,Home
+DOG,June,ALASKAN HUSKY - MIX,Older than 1 year,MALE,true,MED,BLACK,Stray,Home
+CAT,March,,,UNKNOWN,false,LARGE,ORANGE,Stray,Euthanized
+CAT,November,,Infant - Younger than 6 months,FEMALE,true,KITTN,CALICO,Owner Surrender,Home
+DOG,January,,,FEMALE,false,MED,WHITE,Stray,Euthanized
+DOG,May,,,MALE,false,MED,GRAY,Stray,Home
+DOG,April,LABRADOR RETR - MIX,Older than 1 year,FEMALE,true,MED,YELLOW,Owner Surrender,Home
+CAT,June,,Infant - Younger than 6 months,MALE,true,KITTN,GRAY,Stray,Other
+CAT,February,,,UNKNOWN,false,LARGE,ORG TABBY,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,MALE,false,KITTN,GRAY,Stray,Other
+DOG,April,,Older than 7 years,MALE,false,MED,BROWN,Owner Surrender,Euthanized
+DOG,March,PIT BULL - BORDER COLLIE,Youth - Younger than 1 year,MALE,true,LARGE,BROWN,Impound,Other
+CAT,April,,,UNKNOWN,false,KITTN,BRN TABBY,Stray,Euthanized
+DOG,May,CHOW CHOW - LABRADOR RETR,,MALE,true,MED,BLACK,Stray,Home
+DOG,May,GOLDEN RETR - AUST SHEPHERD,,FEMALE,false,PUPPY,BLACK,Owner Surrender,Other
+CAT,October,,Infant - Younger than 6 months,FEMALE,true,KITTN,WHITE,Foster Return,Home
+DOG,February,CANAAN DOG - MIX,Older than 1 year,MALE,false,LARGE,RED,Stray,Other
+DOG,May,,Older than 1 year,MALE,true,MED,TRICOLOR,Owner Surrender,Home
+DOG,August,,Older than 7 years,MALE,true,SMALL,WHITE,Stray,Other
+CAT,October,,,MALE,false,SMALL,BLACK,Owner Surrender,Euthanized
+CAT,November,,,FEMALE,false,MED,BLACK,Owner Surrender,Other
+DOG,August,,,MALE,false,MED,UNKNOWN,Reported Lost by Public,Other
+CAT,June,,Infant - Younger than 6 months,FEMALE,true,KITTN,BRN TABBY,Foster Return,Home
+CAT,April,,,FEMALE,false,LARGE,ORG TIGER,Owner Surrender,Other
+DOG,May,PIT BULL - BULL TERRIER,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Euthanized
+CAT,August,,,MALE,false,LARGE,GRAY TABBY,Stray,Euthanized
+CAT,July,,,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+DOG,January,,Older than 1 year,MALE,false,MED,BROWN,Owner Surrender,Euthanized
+DOG,November,,,FEMALE,false,MED,BLACK,Stray,Other
+CAT,February,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,ORG TABBY,Stray,Other
+DOG,August,,Older than 7 years,FEMALE,false,MED,BLACK,Owner Surrender,Euthanized
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY,Stray,Other
+DOG,November,PIT BULL - MIX,Infant - Younger than 6 months,FEMALE,false,PUPPY,WHITE,Owner Surrender,Other
+CAT,July,,Older than 1 year,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+CAT,March,,Older than 1 year,FEMALE,false,MED,TORTIE,Foster Return,Euthanized
+DOG,February,LABRADOR RETR - MIX,Infant - Younger than 6 months,FEMALE,true,MED,BLACK,Stray,Other
+DOG,July,,Older than 1 year,FEMALE,true,MED,BLACK,Stray,Other
+DOG,February,,Older than 1 year,MALE,false,MED,WHITE,Owner Surrender,Euthanized
+DOG,August,,Older than 1 year,MALE,true,LARGE,WHITE,Foster Return,Home
+CAT,October,,Older than 1 year,FEMALE,false,MED,BRN TABBY,Stray,Euthanized
+DOG,November,,Youth - Younger than 1 year,FEMALE,false,MED,RED,Stray,Euthanized
+DOG,January,PAPILLON - SHIH TZU,Youth - Younger than 1 year,FEMALE,true,SMALL,WHITE,Stray,Home
+DOG,March,BORDER COLLIE - MANCHESTER TERR,Older than 1 year,FEMALE,true,MED,BLACK,Owner Surrender,Home
+CAT,January,,,MALE,false,MED,ORANGE,Stray,Euthanized
+DOG,August,,,FEMALE,false,LARGE,UNKNOWN,Reported Lost by Public,Other
+CAT,August,,,UNKNOWN,false,KITTN,GRAY TABBY,Stray,Euthanized
+CAT,July,,,MALE,true,MED,GRAY,Stray,Euthanized
+CAT,October,,Infant - Younger than 6 months,FEMALE,true,KITTN,ORG TABBY,Stray,Other
+DOG,March,,Older than 1 year,FEMALE,true,LARGE,CHOCOLATE,Out Patient Spay or Neuter,Other
+CAT,January,,Youth - Younger than 1 year,FEMALE,true,MED,BRN TABBY,Stray,Home
+CAT,April,,,MALE,false,LARGE,BLACK,Stray,Other
+DOG,November,,Infant - Younger than 6 months,FEMALE,false,PUPPY,BLUE,Impound,Other
+CAT,August,,,UNKNOWN,false,LARGE,GRAY,Stray,Other
+CAT,March,,,MALE,false,LARGE,GRAY,Stray,Euthanized
+DOG,April,,Older than 1 year,MALE,true,SMALL,WHITE,Impound,Other
+CAT,June,,,FEMALE,false,MED,TORTIE,Stray,Euthanized
+CAT,October,,Infant - Younger than 6 months,MALE,true,KITTN,ORG TABBY,Stray,Other
+DOG,July,HARRIER - MIX,Older than 1 year,FEMALE,false,MED,TAN,Stray,Euthanized
+DOG,September,,,MALE,false,SMALL,UNKNOWN,Reported Lost by Public,Other
+DOG,August,,,MALE,false,SMALL,UNKNOWN,Reported Lost by Public,Other
+DOG,March,RAT TERRIER - MIX,Older than 1 year,MALE,true,SMALL,BLACK,Owner Surrender,Other
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,CALICO,Stray,Euthanized
+DOG,June,BEAGLE - MIX,Infant - Younger than 6 months,UNKNOWN,false,MED,BROWN,Owner Surrender,Other
+DOG,March,,Older than 1 year,MALE,true,LARGE,WHITE,Stray,Other
+CAT,June,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY TIGER,Stray,Euthanized
+DOG,June,PIT BULL - MASTIFF,Older than 7 years,MALE,false,X-LRG,BLACK,Owner Surrender,Euthanized
+CAT,May,,,FEMALE,false,MED,BRN TABBY,Stray,Euthanized
+CAT,February,,,MALE,false,LARGE,BRN TABBY,Stray,Euthanized
+DOG,July,BEAGLE - MIX,Infant - Younger than 6 months,MALE,true,PUPPY,WHITE,Stray,Home
+CAT,December,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BRN TABBY,Owner Surrender,Euthanized
+DOG,April,BEAGLE - MIX,Older than 7 years,FEMALE,true,MED,BROWN,Owner Surrender,Euthanized
+CAT,May,,Older than 7 years,FEMALE,true,LARGE,BLACK,Owner Surrender,Home
+CAT,May,,Older than 1 year,MALE,true,X-LRG,ORG TABBY,Stray,Home
+DOG,April,PUG - BEAGLE,Older than 1 year,MALE,true,MED,TAN,Stray,Home
+CAT,July,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+CAT,July,,,UNKNOWN,false,KITTN,TAN,Stray,Euthanized
+CAT,June,,Infant - Younger than 6 months,MALE,false,KITTN,GRAY,Stray,Other
+DOG,February,COLLIE SMOOTH - MIX,Older than 7 years,MALE,false,MED,WHITE,Owner Surrender,Euthanized
+CAT,September,,Older than 1 year,FEMALE,true,MED,BLACK,Stray,Euthanized
+CAT,July,,Older than 1 year,MALE,false,LARGE,GRAY,Stray,Other
+DOG,July,,Older than 1 year,MALE,true,SMALL,BLACK,Stray,Home
+CAT,February,,Infant - Younger than 6 months,MALE,true,KITTN,BUFF,Owner Surrender,Home
+CAT,April,,,FEMALE,false,KITTN,ORG TABBY,Stray,Other
+DOG,April,,,MALE,false,LARGE,BROWN,Stray,Euthanized
+DOG,January,BEAGLE - MIX,Older than 1 year,MALE,false,LARGE,BLACK,Owner Surrender,Euthanized
+DOG,June,SHIH TZU - MIX,Older than 1 year,MALE,false,SMALL,TAN,Stray,Euthanized
+CAT,April,,,FEMALE,false,LARGE,BLACK,Stray,Other
+DOG,January,LABRADOR RETR - MIX,Infant - Younger than 6 months,MALE,true,PUPPY,WHITE,Owner Surrender,Home
+CAT,May,,Older than 1 year,MALE,false,MED,ORG TABBY,Stray,Euthanized
+CAT,October,,Older than 1 year,FEMALE,false,SMALL,GRAY TABBY,Owner Surrender,Euthanized
+CAT,May,,,MALE,false,MED,GRAY TABBY,Stray,Euthanized
+DOG,July,,Older than 1 year,MALE,true,LARGE,BROWN,Stray,Other
+CAT,September,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY,Stray,Other
+DOG,March,,Older than 7 years,FEMALE,true,MED,BROWN,Stray,Home
+DOG,July,,Older than 1 year,MALE,true,LARGE,BLACK,Stray,Other
+CAT,July,,,UNKNOWN,false,MED,TORTIE,Stray,Other
+DOG,August,,,MALE,true,LARGE,BLACK,Stray,Home
+CAT,August,,Older than 1 year,FEMALE,false,LARGE,GRAY TABBY,Owner Surrender,Euthanized
+DOG,November,,Older than 1 year,MALE,true,TOY,BLACK,Stray,Home
+DOG,July,,Older than 1 year,FEMALE,true,MED,BRN MERLE,Owner Surrender,Other
+DOG,May,GREAT DANE - MIX,Older than 1 year,MALE,true,LARGE,WHITE,Stray,Home
+DOG,July,,,FEMALE,false,TOY,UNKNOWN,Reported Lost by Public,Other
+DOG,August,,Older than 1 year,MALE,true,MED,BLACK,Stray,Other
+DOG,July,,Older than 7 years,MALE,true,LARGE,RED,Stray,Home
+DOG,July,,Older than 1 year,MALE,false,SMALL,TAN,Stray,Other
+DOG,July,,Infant - Younger than 6 months,FEMALE,false,PUPPY,BROWN,Impound,Other
+CAT,February,,,FEMALE,false,MED,WHITE,Stray,Euthanized
+DOG,February,BLACK MOUTH CUR - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,BROWN,Stray,Home
+DOG,March,,Older than 1 year,FEMALE,true,SMALL,SABLE,Stray,Home
+DOG,July,,,UNKNOWN,false,TOY,BLACK,Stray,Euthanized
+DOG,September,,Infant - Younger than 6 months,MALE,true,PUPPY,WHITE,Owner Surrender,Home
+CAT,September,,Infant - Younger than 6 months,MALE,false,KITTN,GRAY TIGER,Stray,Euthanized
+DOG,April,,Infant - Younger than 6 months,FEMALE,true,PUPPY,CHOCOLATE,Stray,Home
+DOG,March,,Youth - Younger than 1 year,FEMALE,true,SMALL,WHITE,Out Patient Spay or Neuter,Other
+DOG,April,,Older than 1 year,MALE,false,MED,TAN,Stray,Euthanized
+DOG,February,JACK RUSS TER - MIX,Infant - Younger than 6 months,FEMALE,false,SMALL,WHITE,Owner Surrender,Other
+CAT,March,,Older than 1 year,FEMALE,true,SMALL,BRN TABBY,Stray,Home
+DOG,April,BORDER COLLIE - MIX,Older than 1 year,MALE,true,MED,BLACK,Owner Surrender,Other
+CAT,February,,Youth - Younger than 1 year,FEMALE,true,LARGE,GRAY TIGER,Stray,Home
+CAT,March,,,UNKNOWN,false,KITTN,BROWN,Stray,Euthanized
+DOG,April,OLDENG SHEEPDOG - MIX,Older than 7 years,MALE,true,MED,WHITE,Owner Surrender,Other
+DOG,February,GERM SHEPHERD - MIX,Older than 7 years,FEMALE,true,MED,BLACK,Owner Surrender,Home
+CAT,April,,Older than 1 year,MALE,true,MED,BLACK,Stray,Euthanized
+DOG,August,,Older than 7 years,MALE,false,MED,TRICOLOR,Owner Surrender,Euthanized
+CAT,September,,,MALE,false,MED,ORG TABBY,Stray,Euthanized
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,BRN TABBY,Owner Surrender,Home
+DOG,October,LHASA APSO - MIX,Older than 7 years,MALE,true,SMALL,GRAY,Owner Surrender,Euthanized
+DOG,October,,Older than 1 year,FEMALE,false,SMALL,WHITE,Owner Surrender,Other
+DOG,July,,Older than 1 year,FEMALE,true,MED,WHITE,Foster Return,Home
+CAT,July,BALINESE - MIX,Infant - Younger than 6 months,MALE,true,KITTN,LYNX PT,Foster Return,Other
+DOG,September,,Older than 1 year,MALE,false,LARGE,BLACK,Stray,Euthanized
+DOG,February,CHOW CHOW - NEWFOUNDLAND,Older than 7 years,FEMALE,false,MED,BLACK,Owner Surrender,Euthanized
+DOG,September,,Older than 1 year,FEMALE,true,TOY,BROWN,Impound,Home
+DOG,August,LABRADOR RETR - MIX,,FEMALE,true,MED,BLACK,Stray,Other
+DOG,March,CHIHUAHUA SH - MIX,Older than 1 year,FEMALE,true,TOY,BLACK,Owner Surrender,Home
+DOG,July,COLLIE SMOOTH - MIX,Older than 7 years,FEMALE,true,LARGE,BROWN,Owner Surrender,Euthanized
+CAT,October,,Infant - Younger than 6 months,MALE,true,KITTN,BLACK,Owner Surrender,Home
+DOG,May,,Older than 1 year,FEMALE,true,MED,BLACK,Owner Surrender,Home
+DOG,August,TOY FOX TERRIER - MIX,,FEMALE,true,SMALL,BROWN,Stray,Other
+DOG,July,SCOT TERRIER - LABRADOR RETR,Infant - Younger than 6 months,FEMALE,true,PUPPY,WHITE,Stray,Other
+DOG,April,,,FEMALE,false,LARGE,WHITE,Stray,Euthanized
+DOG,April,MASTIFF - MIX,Older than 1 year,MALE,false,X-LRG,BLACK,Owner Surrender,Euthanized
+CAT,December,,Older than 1 year,FEMALE,false,KITTN,GRAY TABBY,Owner Surrender,Euthanized
+CAT,April,,,FEMALE,false,MED,BLACK,Stray,Euthanized
+CAT,October,,Older than 1 year,FEMALE,true,MED,GRAY,Stray,Home
+CAT,September,,Older than 1 year,FEMALE,false,SMALL,BRN TABBY,Foster Return,Other
+CAT,March,,,MALE,true,X-LRG,BLACK,Stray,Euthanized
+CAT,May,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BLK TABBY,Stray,Euthanized
+DOG,April,,Older than 7 years,MALE,false,X-LRG,WHITE,Owner Surrender,Euthanized
+DOG,January,,,MALE,false,PUPPY,TAN,Stray,Other
+CAT,June,,,UNKNOWN,false,KITTN,CALICO,Stray,Euthanized
+CAT,April,,,UNKNOWN,false,KITTN,BLK TABBY,Stray,Euthanized
+CAT,September,,Infant - Younger than 6 months,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+CAT,June,,,FEMALE,false,SMALL,CALICO,Stray,Euthanized
+DOG,January,,Older than 1 year,FEMALE,true,SMALL,BLACK,Stray,Home
+CAT,May,,,MALE,false,KITTN,BLACK,Stray,Euthanized
+CAT,September,,,UNKNOWN,false,KITTN,ORG TABBY,Stray,Euthanized
+CAT,October,,,MALE,false,MED,BLACK,Stray,Euthanized
+CAT,April,,Older than 1 year,FEMALE,false,MED,TORTIE,Stray,Euthanized
+DOG,November,MASTIFF - MIX,Older than 1 year,MALE,true,LARGE,BR BRINDLE,Stray,Home
+CAT,May,,,MALE,false,KITTN,BRN TABBY,Owner Surrender,Other
+DOG,March,,Older than 1 year,MALE,true,MED,TRICOLOR,Stray,Home
+CAT,February,,Youth - Younger than 1 year,FEMALE,true,SMALL,BLACK,Out Patient Spay or Neuter,Other
+DOG,May,LABRADOR RETR - MIX,,MALE,false,LARGE,BROWN,Stray,Other
+CAT,August,,,FEMALE,false,MED,TORTIE,Stray,Euthanized
+DOG,October,ST BERNARD SMTH - STAFFORDSHIRE,,MALE,false,LARGE,BROWN,Stray,Euthanized
+CAT,August,,,MALE,false,SMALL,BLACK,Owner Surrender,Euthanized
+CAT,June,DOMESTIC SH - DOMESTIC SH,,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+CAT,January,,Youth - Younger than 1 year,FEMALE,true,MED,GRAY TABBY,Owner Surrender,Home
+DOG,January,,Older than 7 years,MALE,false,SMALL,BROWN,Owner Surrender,Euthanized
+DOG,August,LABRADOR RETR - MIX,Youth - Younger than 1 year,MALE,true,LARGE,BLACK,Owner Surrender,Other
+DOG,April,LABRADOR RETR - MIX,Youth - Younger than 1 year,FEMALE,true,PUPPY,BLACK,Owner Surrender,Other
+DOG,May,,Older than 7 years,FEMALE,true,LARGE,YELLOW,Stray,Home
+CAT,June,,Infant - Younger than 6 months,FEMALE,true,KITTN,WHITE,Owner Surrender,Home
+DOG,March,POODLE MIN - MIX,Older than 7 years,FEMALE,true,SMALL,TAN,Owner Surrender,Other
+CAT,September,,Infant - Younger than 6 months,MALE,false,MED,GRAY TABBY,Stray,Other
+DOG,August,,,FEMALE,true,SMALL,BLUE,Owner Surrender,Other
+CAT,December,,,UNKNOWN,false,MED,BLACK,Stray,Other
+DOG,October,,Infant - Younger than 6 months,FEMALE,false,PUPPY,FAWN,Stray,Home
+CAT,August,,,MALE,false,LARGE,UNKNOWN,Reported Lost by Public,Other
+CAT,August,,,MALE,false,MED,UNKNOWN,Reported Lost by Public,Other
+DOG,November,,Youth - Younger than 1 year,MALE,true,TOY,BLACK,Stray,Home
+DOG,January,,Older than 1 year,FEMALE,true,MED,TRICOLOR,Owner Surrender,Other
+DOG,November,,Older than 1 year,MALE,false,MED,BROWN,Owner Surrender,Euthanized
+DOG,July,,,FEMALE,false,MED,BROWN,Stray,Euthanized
+CAT,May,,Infant - Younger than 6 months,FEMALE,false,KITTN,BLK TABBY,Owner Surrender,Euthanized
+CAT,May,,,UNKNOWN,false,KITTN,ORANGE,Stray,Euthanized
+DOG,June,,Youth - Younger than 1 year,MALE,false,SMALL,BLACK,Owner Surrender,Other
+DOG,July,PIT BULL - MIX,Older than 1 year,MALE,false,LARGE,TAN,Stray,Euthanized
+DOG,May,,Youth - Younger than 1 year,MALE,true,LARGE,CHOCOLATE,Stray,Home
+CAT,June,,,FEMALE,false,SMALL,BLACK,Stray,Other
+CAT,August,,Infant - Younger than 6 months,FEMALE,true,KITTN,GRAY,Stray,Other
+CAT,April,,,MALE,false,KITTN,BRN TABBY,Stray,Other
+CAT,September,,,MALE,false,KITTN,BLACK,Owner Surrender,Euthanized
+DOG,April,,Older than 1 year,MALE,true,LARGE,TRICOLOR,Foster Return,Home
+CAT,July,,Older than 1 year,FEMALE,false,MED,BLACK,Stray,Euthanized
+DOG,December,,Older than 1 year,FEMALE,true,MED,BR BRINDLE,Stray,Other
+CAT,May,,,UNKNOWN,false,MED,GRAY,Stray,Other
+DOG,May,,Older than 1 year,MALE,true,MED,RED,Owner Surrender,Other
+CAT,April,,,MALE,false,X-LRG,GRAY TABBY,Stray,Euthanized
+CAT,March,,Infant - Younger than 6 months,MALE,true,KITTN,BLACK,Stray,Other
+DOG,March,JACK RUSS TER - SHIH TZU,Infant - Younger than 6 months,FEMALE,true,PUPPY,WHITE,Owner Surrender,Home
+CAT,February,,Older than 1 year,MALE,true,KITTN,ORG TABBY,Owner Surrender,Home
+CAT,July,,Infant - Younger than 6 months,FEMALE,true,KITTN,CALICO,Foster Return,Home
+DOG,July,BEAGLE - MIX,,FEMALE,false,PUPPY,TAN,Stray,Other
+CAT,October,,Older than 1 year,MALE,false,SMALL,BLK TABBY,Owner Surrender,Euthanized
+DOG,March,,Older than 7 years,MALE,true,SMALL,RED,Owner Surrender,Euthanized
+CAT,March,,,MALE,false,LARGE,ORG TABBY,Stray,Euthanized
+CAT,August,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY,Stray,Other
+CAT,January,,,UNKNOWN,false,MED,GRAY TIGER,Stray,Other
+DOG,May,BULLDOG - BOXER,Youth - Younger than 1 year,MALE,false,MED,BR BRINDLE,Impound,Other
+DOG,June,,Older than 1 year,FEMALE,false,MED,BROWN,Stray,Euthanized
+DOG,August,LABRADOR RETR - MIX,,FEMALE,false,LARGE,BLACK,Stray,Euthanized
+DOG,May,,Older than 1 year,MALE,true,TOY,TAN,Stray,Home
+CAT,June,,,FEMALE,false,LARGE,ORG TABBY,Stray,Euthanized
+CAT,March,,,FEMALE,false,MED,CALICO,Stray,Euthanized
+CAT,October,,,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,ORANGE,Foster Return,Home
+DOG,August,COCKER SPAN - POODLE MIN,Older than 1 year,MALE,true,SMALL,BLACK,Stray,Home
+CAT,January,,Older than 1 year,MALE,false,SMALL,BLACK,Stray,Euthanized
+DOG,May,SCHNAUZER MIN - MIX,Older than 1 year,MALE,true,SMALL,GRAY,Stray,Home
+CAT,May,,Infant - Younger than 6 months,MALE,true,KITTN,GRAY,Foster Return,Home
+DOG,March,BOXER - PURE BRED,Older than 7 years,MALE,true,MED,FAWN,Owner Surrender,Euthanized
+DOG,October,PUG - MIX,Older than 1 year,MALE,true,SMALL,CREAM,Stray,Home
+CAT,October,,Older than 1 year,UNKNOWN,false,MED,BLACK,Stray,Other
+CAT,June,,Older than 1 year,MALE,true,LARGE,BLACK,Owner Surrender,Other
+DOG,March,CHOW CHOW - LABRADOR RETR,,MALE,false,MED,BR BRINDLE,Stray,Euthanized
+DOG,March,CATAHOULA - MIX,Older than 1 year,MALE,true,LARGE,BRN MERLE,Stray,Home
+DOG,August,,Older than 1 year,MALE,true,X-LRG,BR BRINDLE,Owner Surrender,Home
+CAT,November,,,FEMALE,false,KITTN,CALICO,Stray,Euthanized
+DOG,June,,Youth - Younger than 1 year,FEMALE,true,PUPPY,BROWN,Owner Surrender,Home
+CAT,September,,Older than 1 year,FEMALE,false,SMALL,CRM TABBY,Owner Surrender,Euthanized
+CAT,June,,Older than 1 year,FEMALE,true,X-LRG,BRN TABBY,Owner Surrender,Euthanized
+CAT,March,,,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+DOG,November,,Infant - Younger than 6 months,MALE,true,PUPPY,BROWN,Owner Surrender,Home
+CAT,April,,,FEMALE,false,SMALL,BLACK,Stray,Euthanized
+DOG,July,DACHSHUND WH - MIX,Older than 7 years,MALE,true,SMALL,BLACK,Stray,Other
+CAT,August,,,UNKNOWN,false,KITTN,GRAY TABBY,Stray,Euthanized
+DOG,February,GOLDEN RETR - MIX,Infant - Younger than 6 months,MALE,true,PUPPY,GOLD,Owner Surrender,Home
+CAT,May,,Older than 1 year,MALE,false,MED,GRAY TABBY,Owner Surrender,Euthanized
+DOG,February,,Infant - Younger than 6 months,MALE,true,PUPPY,BLACK,Impound,Home
+DOG,June,,,MALE,false,MED,WHITE,Stray,Euthanized
+DOG,July,,,MALE,false,MED,BROWN,Impound,Euthanized
+CAT,April,,Infant - Younger than 6 months,MALE,true,KITTN,BLACK,Owner Surrender,Home
+CAT,May,,,UNKNOWN,false,KITTN,BLACK,Stray,Euthanized
+CAT,July,,Infant - Younger than 6 months,MALE,true,KITTN,BRN TABBY,Foster Return,Home
+DOG,July,COLLIE SMOOTH - MIX,Youth - Younger than 1 year,FEMALE,true,PUPPY,BLACK,Owner Surrender,Other
+CAT,July,,,FEMALE,false,KITTN,WHITE,Owner Surrender,Euthanized
+DOG,October,DALMATIAN - MIX,Older than 7 years,FEMALE,false,LARGE,WHITE,Owner Surrender,Euthanized
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,GRAY TIGER,Stray,Euthanized
+DOG,January,,Older than 1 year,MALE,true,MED,TRICOLOR,Owner Surrender,Other
+DOG,July,LABRADOR RETR - DOBERMAN PINSCH,Infant - Younger than 6 months,FEMALE,false,PUPPY,BLACK,Owner Surrender,Other
+CAT,March,,,MALE,false,MED,GRAY,Stray,Other
+CAT,July,,Older than 1 year,FEMALE,true,KITTN,BRN TABBY,Owner Surrender,Home
+DOG,March,,Youth - Younger than 1 year,FEMALE,true,MED,BLACK,Stray,Home
+CAT,January,,Older than 7 years,FEMALE,true,MED,CALICO,Owner Surrender,Euthanized
+DOG,March,GERM SHEPHERD - JACK RUSS TER,Older than 7 years,FEMALE,true,MED,BROWN,Stray,Home
+CAT,January,,,FEMALE,true,MED,WHITE,Stray,Other
+CAT,July,,Older than 1 year,FEMALE,true,LARGE,BLACK,Stray,Home
+DOG,May,GERM SHEPHERD - MIX,Older than 1 year,FEMALE,true,MED,TRICOLOR,Owner Surrender,Home
+DOG,January,,,FEMALE,false,PUPPY,BR BRINDLE,Stray,Other
+CAT,May,,Older than 1 year,FEMALE,true,MED,BLACK,Stray,Other
+CAT,January,,Youth - Younger than 1 year,FEMALE,true,MED,TORTIE,Out Patient Spay or Neuter,Home
+DOG,February,,Youth - Younger than 1 year,MALE,true,SMALL,BR BRINDLE,Out Patient Spay or Neuter,Home
+DOG,May,,,MALE,true,MED,BROWN,Stray,Euthanized
+DOG,April,,Older than 7 years,FEMALE,false,LARGE,GOLD,Stray,Home
+DOG,April,,,FEMALE,false,MED,TAN,Stray,Euthanized
+CAT,March,,Older than 1 year,FEMALE,true,MED,TORTIE,Stray,Other
+DOG,August,GERM SHEPHERD - MIX,Older than 1 year,FEMALE,false,MED,BROWN,Stray,Euthanized
+CAT,April,,,FEMALE,true,LARGE,GRAY,Owner Surrender,Euthanized
+DOG,September,,Older than 1 year,MALE,true,TOY,GRAY,Owner Surrender,Home
+CAT,May,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY TABBY,Owner Surrender,Other
+CAT,May,,Older than 1 year,FEMALE,false,MED,BRN TABBY,Owner Surrender,Euthanized
+DOG,May,AUST CATTLE DOG - AUST SHEPHERD,Older than 1 year,FEMALE,true,MED,BLUE MERLE,Owner Surrender,Other
+CAT,February,,,FEMALE,false,SMALL,BLACK,Stray,Euthanized
+DOG,November,,,UNKNOWN,false,LARGE,BROWN,Stray,Other
+CAT,May,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,BRN TABBY,Stray,Other
+CAT,June,,Older than 1 year,MALE,true,MED,BLACK,Stray,Other
+DOG,June,,Older than 7 years,MALE,false,SMALL,BROWN,Stray,Euthanized
+DOG,April,PIT BULL - MIX,,MALE,false,MED,BROWN,Stray,Other
+DOG,January,,Older than 7 years,FEMALE,false,SMALL,TRICOLOR,Owner Surrender,Euthanized
+CAT,October,,Older than 1 year,MALE,false,LARGE,BLACK,Stray,Euthanized
+CAT,May,,,UNKNOWN,false,KITTN,BLACK,Foster Return,Euthanized
+CAT,February,,,MALE,true,MED,BLACK,Stray,Home
+CAT,August,,,FEMALE,false,SMALL,UNKNOWN,Reported Lost by Public,Other
+CAT,June,,,MALE,false,SMALL,BRN TABBY,Stray,Euthanized
+CAT,August,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY,Owner Surrender,Euthanized
+CAT,April,,,MALE,false,KITTN,BRN TABBY,Stray,Other
+DOG,September,BOSTON TERRIER - MIX,Older than 1 year,MALE,false,MED,CHOCOLATE,Stray,Other
+DOG,April,MIN PINSCHER - MIX,,MALE,false,SMALL,BLACK,Stray,Other
+DOG,August,MIN PINSCHER - MIX,Youth - Younger than 1 year,MALE,true,MED,BLACK,Stray,Other
+DOG,May,,Older than 1 year,FEMALE,true,MED,TRICOLOR,Stray,Home
+DOG,August,BOXER - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,FAWN,Stray,Home
+DOG,December,POINTER - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,WHITE,Stray,Other
+CAT,July,,Infant - Younger than 6 months,FEMALE,true,SMALL,WHITE,Owner Surrender,Home
+CAT,June,,Infant - Younger than 6 months,MALE,true,KITTN,BLACK,Stray,Other
+DOG,June,CHINESE SHARPEI - PIT BULL,Older than 1 year,FEMALE,true,PUPPY,BUFF,Owner Surrender,Home
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,GRAY TABBY,Owner Surrender,Euthanized
+CAT,June,,Infant - Younger than 6 months,UNKNOWN,false,KITTN,GRAY,Stray,Euthanized
+CAT,April,DOMESTIC SH - MANX,Infant - Younger than 6 months,MALE,true,KITTN,BRN TABBY,Stray,Other
+CAT,May,,Infant - Younger than 6 months,MALE,true,KITTN,BUFF,Stray,Home
+DOG,July,CHIHUAHUA SH - MIN PINSCHER,Older than 1 year,MALE,true,SMALL,GOLD,Owner Surrender,Home
+DOG,June,,Older than 1 year,MALE,true,SMALL,BLACK,Stray,Other
+CAT,June,,,UNKNOWN,false,LARGE,ORG TABBY,Stray,Euthanized
+DOG,February,,,FEMALE,true,TOY,BUFF,Stray,Home
+DOG,March,AUST CATTLE DOG - MIX,Older than 1 year,FEMALE,true,MED,WHITE,Stray,Home
+CAT,June,,Older than 1 year,FEMALE,true,MED,GRAY,Stray,Other
+DOG,December,,Youth - Younger than 1 year,FEMALE,true,SMALL,BLACK,Stray,Other
+CAT,October,,Infant - Younger than 6 months,FEMALE,true,KITTN,TORTIE,Stray,Other
+CAT,November,,Infant - Younger than 6 months,FEMALE,true,KITTN,TORTIE,Stray,Home
+CAT,December,,Older than 7 years,FEMALE,true,MED,GRAY TABBY,Stray,Euthanized
+DOG,February,,Older than 1 year,MALE,false,X-LRG,WHITE,Owner Surrender,Euthanized
+CAT,March,,,MALE,false,LARGE,GRAY,Stray,Euthanized
+DOG,February,,Older than 1 year,FEMALE,true,MED,FAWN,Stray,Home
+CAT,April,,,MALE,false,X-LRG,BRN TABBY,Stray,Other
+CAT,May,,,MALE,false,KITTN,BRN TABBY,Foster Return,Home
+DOG,January,,Older than 1 year,MALE,true,LARGE,BLACK,Stray,Other
+DOG,August,AKITA - PURE BRED,Older than 7 years,FEMALE,false,MED,BLACK,Stray,Other
+CAT,July,,Infant - Younger than 6 months,FEMALE,false,KITTN,TORTIE,Stray,Other
+DOG,January,,,MALE,true,LARGE,BLACK,Stray,Other
+CAT,May,DOMESTIC SH - MIX,Infant - Younger than 6 months,FEMALE,true,KITTN,TORTIE,Owner Surrender,Home
+DOG,May,,Older than 7 years,MALE,true,MED,WHITE,Owner Surrender,Euthanized
+DOG,July,,Older than 1 year,MALE,false,MED,BLACK,Stray,Home
+CAT,July,,Older than 1 year,FEMALE,false,SMALL,BLACK,Owner Surrender,Euthanized
+DOG,March,,Youth - Younger than 1 year,MALE,false,MED,TAN,Owner Surrender,Euthanized
+CAT,June,,,FEMALE,false,KITTN,GRAY,Stray,Other
+CAT,August,,,FEMALE,true,MED,GRAY TABBY,Owner Surrender,Euthanized
+DOG,September,,Older than 1 year,MALE,false,MED,CHOCOLATE,Impound,Euthanized
+CAT,June,,Infant - Younger than 6 months,FEMALE,false,KITTN,BRN TIGER,Stray,Other
+DOG,September,,,MALE,false,PUPPY,BLACK,Stray,Euthanized
+DOG,May,,,MALE,true,LARGE,APRICOT,Impound,Other
+CAT,March,,,UNKNOWN,false,MED,GRAY,Stray,Euthanized
+CAT,August,,,UNKNOWN,false,KITTN,ORG TABBY,Stray,Euthanized
+DOG,November,BEAGLE - MIX,Older than 1 year,FEMALE,true,MED,TRICOLOR,Owner Surrender,Home
+DOG,July,AUST SHEPHERD - BORDER COLLIE,Older than 1 year,MALE,true,LARGE,BROWN,Stray,Home
+DOG,November,,Older than 1 year,MALE,true,SMALL,BLACK,Stray,Home
+DOG,December,GERM SHEPHERD - BLACK/TAN HOUND,Youth - Younger than 1 year,FEMALE,true,LARGE,BROWN,Owner Surrender,Home
+DOG,September,,Older than 7 years,MALE,false,LARGE,LIVER,Owner Surrender,Euthanized
+CAT,August,,Infant - Younger than 6 months,FEMALE,true,KITTN,WHITE,Stray,Other
+DOG,January,,Youth - Younger than 1 year,FEMALE,true,SMALL,WHITE,Stray,Home
+CAT,November,,Older than 1 year,FEMALE,false,MED,BLACK,Owner Surrender,Euthanized
+CAT,February,,Older than 1 year,MALE,true,LARGE,ORG TABBY,Foster Return,Other
+DOG,March,GERM SHEPHERD - BEAGLE,Older than 1 year,FEMALE,true,MED,BLACK,Stray,Other
+DOG,February,,Older than 7 years,FEMALE,false,LARGE,BLACK,Owner Surrender,Euthanized
+DOG,June,,Infant - Younger than 6 months,FEMALE,true,PUPPY,BLACK,Owner Surrender,Home
+CAT,February,,,FEMALE,false,LARGE,BLACK,Stray,Euthanized
+DOG,June,,Older than 7 years,MALE,true,MED,BROWN,Stray,Home
+DOG,February,BEAGLE - WELSH CORGI CAR,Infant - Younger than 6 months,MALE,true,PUPPY,GRAY,Stray,Home
+DOG,September,,Youth - Younger than 1 year,MALE,true,PUPPY,WHITE,Stray,Home
+DOG,July,GERM SHEPHERD - MIX,Older than 7 years,FEMALE,true,LARGE,WHITE,Stray,Other
+DOG,August,BEAGLE - MIX,,FEMALE,false,MED,BR BRINDLE,Stray,Euthanized
+DOG,August,SHIH TZU - HAVANESE,Older than 1 year,MALE,true,SMALL,TRICOLOR,Owner Surrender,Home
+DOG,January,PIT BULL - MIX,Older than 1 year,FEMALE,true,MED,WHITE,Owner Surrender,Home
+DOG,June,,Older than 1 year,MALE,true,LARGE,BLACK,Stray,Home
+DOG,November,PIT BULL - MIX,Infant - Younger than 6 months,FEMALE,true,PUPPY,WHITE,Owner Surrender,Home
+DOG,November,,Older than 1 year,MALE,true,LARGE,BLACK,Stray,Other
+CAT,January,,,MALE,false,LARGE,ORG TABBY,Stray,Euthanized
+DOG,March,LABRADOR RETR - MIX,Older than 1 year,MALE,true,LARGE,BR BRINDLE,Impound,Home
+CAT,October,,Older than 7 years,MALE,true,LARGE,GRAY,Owner Surrender,Euthanized
+DOG,August,,Older than 1 year,MALE,false,SMALL,BLACK,Stray,Euthanized
+CAT,August,,,UNKNOWN,false,KITTN,GRAY TIGER,Stray,Euthanized
+CAT,March,,Older than 1 year,FEMALE,false,SMALL,BLACK,Owner Surrender,Euthanized
+CAT,April,,,UNKNOWN,false,KITTN,GRAY TABBY,Stray,Euthanized
+DOG,September,,,MALE,false,TOY,UNKNOWN,Reported Lost by Public,Other
+DOG,April,CHOW CHOW - GOLDEN RETR,Older than 1 year,MALE,true,LARGE,RED,Owner Surrender,Euthanized
+DOG,March,ENG POINTER - MIX,Older than 1 year,FEMALE,true,LARGE,WHITE,Stray,Home
+DOG,May,SCHNAUZER GIANT - POODLE STND,Youth - Younger than 1 year,FEMALE,false,LARGE,BLACK,Stray,Other
+CAT,October,,Youth - Younger than 1 year,FEMALE,false,MED,GRAY TABBY,Stray,Euthanized
+DOG,February,,,MALE,false,PUPPY,BROWN,Stray,Other
+DOG,May,BEAGLE - MIX,Infant - Younger than 6 months,FEMALE,true,MED,TAN,Stray,Home
+CAT,July,,,UNKNOWN,false,MED,GRAY,Owner Surrender,Euthanized
+DOG,May,,,FEMALE,true,MED,TRICOLOR,Stray,Home
+DOG,March,GERM SHEPHERD - AKITA,,FEMALE,false,PUPPY,BROWN,Owner Surrender,Other
+CAT,March,,Older than 1 year,FEMALE,true,MED,TORTIE,Foster Return,Home
+CAT,January,,Youth - Younger than 1 year,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+CAT,April,,,UNKNOWN,false,MED,BLACK,Stray,Euthanized
+CAT,January,,Older than 1 year,FEMALE,true,MED,TORTIE,Stray,Home
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,SMALL,BRN TABBY,Stray,Other
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,CALICO,Owner Surrender,Other
+CAT,August,,Older than 1 year,FEMALE,true,MED,WHITE,Foster Return,Home
+DOG,September,BEAGLE - MIX,Infant - Younger than 6 months,FEMALE,true,MED,BROWN,Stray,Home
+DOG,July,BOXER - MIX,,MALE,true,MED,RED,Stray,Home
+DOG,December,GOLDEN RETR - MIX,,MALE,false,MED,BROWN,Stray,Euthanized
+CAT,July,,,FEMALE,false,LARGE,GRAY,Stray,Euthanized
+CAT,March,,Older than 1 year,MALE,false,MED,ORG TABBY,Stray,Euthanized
+DOG,August,JACK RUSS TER - BEAGLE,Infant - Younger than 6 months,MALE,false,SMALL,BROWN,Stray,Other
+CAT,August,,Infant - Younger than 6 months,FEMALE,false,KITTN,CALICO,Stray,Euthanized
+DOG,April,GERM SHEPHERD - MIX,Youth - Younger than 1 year,MALE,true,MED,BLACK,Impound,Other
+CAT,April,,Youth - Younger than 1 year,MALE,true,KITTN,BRN TABBY,Owner Surrender,Home
+DOG,May,,Older than 7 years,FEMALE,true,LARGE,BROWN,Owner Surrender,Euthanized
+CAT,June,,,UNKNOWN,false,KITTN,ORANGE,Stray,Other
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,ORG TABBY,Foster Return,Home
+CAT,March,,,MALE,false,MED,BRN TABBY,Stray,Other
+DOG,August,,,FEMALE,false,TOY,BROWN,Owner Surrender,Other
+CAT,March,,,UNKNOWN,false,MED,ORG TIGER,Stray,Other
+CAT,October,,,UNKNOWN,false,LARGE,BLACK,Stray,Euthanized
+DOG,February,SCHNAUZER MIN - MIX,Youth - Younger than 1 year,FEMALE,true,MED,BR BRINDLE,Owner Surrender,Home
+DOG,May,,Older than 1 year,FEMALE,false,MED,TAN,Owner Surrender,Euthanized
+DOG,September,,Infant - Younger than 6 months,MALE,false,PUPPY,BLACK,Stray,Euthanized
+DOG,January,PIT BULL - MIX,,MALE,true,MED,WHITE,Stray,Euthanized
+CAT,April,,Infant - Younger than 6 months,MALE,true,KITTN,ORG TABBY,Owner Surrender,Other
+CAT,May,,,FEMALE,false,KITTN,BLACK,Stray,Euthanized
+CAT,June,,Infant - Younger than 6 months,FEMALE,true,SMALL,BLACK,Foster Return,Home
+DOG,August,,Infant - Younger than 6 months,MALE,false,PUPPY,BLACK,Owner Surrender,Euthanized
+CAT,February,,Infant - Younger than 6 months,FEMALE,true,KITTN,BLACK,Owner Surrender,Home
+CAT,May,,Infant - Younger than 6 months,FEMALE,true,KITTN,CALICO,Stray,Other
+DOG,March,BORDER TERRIER - SHIH TZU,Youth - Younger than 1 year,FEMALE,true,SMALL,WHITE,Stray,Home
+CAT,January,,,MALE,false,MED,BUFF,Stray,Euthanized
+CAT,January,,Older than 7 years,MALE,true,MED,GRAY,Owner Surrender,Euthanized
+CAT,May,,,UNKNOWN,false,KITTN,WHITE,Stray,Euthanized
+CAT,March,,Older than 1 year,FEMALE,true,LARGE,GRAY TABBY,Owner Surrender,Home
+CAT,October,,Infant - Younger than 6 months,FEMALE,false,KITTN,BLACK,Stray,Other
+DOG,September,LABRADOR RETR - MIX,Youth - Younger than 1 year,FEMALE,true,MED,BRN MERLE,Stray,Other
+CAT,March,,Older than 1 year,FEMALE,false,SMALL,BLACK,Owner Surrender,Euthanized
+DOG,June,,Older than 1 year,MALE,true,LARGE,BROWN,Owner Surrender,Euthanized
+DOG,July,PIT BULL - MIX,Older than 1 year,FEMALE,true,MED,BLUE,Foster Return,Euthanized
+DOG,May,BOXER - STAFFORDSHIRE,Older than 1 year,MALE,true,PUPPY,BROWN,Owner Surrender,Home
+DOG,April,,Older than 1 year,MALE,true,SMALL,WHITE,Owner Surrender,Home
+CAT,June,,Infant - Younger than 6 months,FEMALE,true,SMALL,BRN TABBY,Stray,Home
+DOG,January,,Infant - Younger than 6 months,MALE,true,PUPPY,BLACK,Stray,Home
+DOG,March,,,FEMALE,false,LARGE,WHITE,Stray,Other
+CAT,October,,Infant - Younger than 6 months,FEMALE,false,SMALL,BLACK,Stray,Euthanized
+CAT,September,,,UNKNOWN,false,KITTN,BLACK,Owner Surrender,Euthanized
+DOG,May,PIT BULL - MIX,Older than 1 year,FEMALE,true,SMALL,BR BRINDLE,Owner Surrender,Other
+CAT,January,,,UNKNOWN,false,LARGE,CALICO,Stray,Euthanized
+DOG,April,,,FEMALE,true,MED,WHITE,Stray,Euthanized
