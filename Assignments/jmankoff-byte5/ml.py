@@ -194,8 +194,8 @@ except IOError:
 # as that might bias the results
 # It may be important to calculate features based on these though
 # such as something that deals better with mixed breeds to improve the results
-features = ['AnimalType', 'Breed', 'Color', 'IntakeMonth', 'IntakeType',
-            'Sex', 'Size', 'SpayNeuter', 'Age']
+features = ['AnimalType', 'IntakeMonth', 'Breed', 'Age', 'Sex', 'SpayNeuter',
+            'Size', 'Color', 'IntakeType']
 # this will be the class we are predicting.
 # We will need to narrow it down to fewer classes probably
 out = 'Outcome'
@@ -239,6 +239,7 @@ for name in features:
     datareader = csv.reader(csvfile, delimiter=',')
     for row in datareader:
         labels.append(row[0])
+
 # make a label for empty values too
 labels.append(u'')
 le.fit(labels)
@@ -341,7 +342,7 @@ print " Results of optimization "
 print "============================================="
 print "Dummy Mean accuracy: ", np.mean(dc_acc_scores)
 print "Naive Bayes Mean accuracy: ", np.mean(gnb_acc_scores)
-print "fscore for Dummy Classifier and Naive Bayes differ by {0}; p<{1}".format(diff, prob)
+print "Accuracy for Dummy Classifier and Naive Bayes differ by {0}; p<{1}".format(diff, prob)
 
 print "These are good summary scores, but you may also want to" 
 print "Look at the details of what is going on inside this"
