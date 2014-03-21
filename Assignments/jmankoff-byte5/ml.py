@@ -256,7 +256,6 @@ nrows = len(all_data)
 percent = len(X)/20
 X_opt = X[:percent, :]
 y_opt = y[:percent]
-X_opt = np.insert(X_opt, len(features), y_opt, axis=1)
 
 # and a train/test set
 X_rest = X[percent:, :]
@@ -267,11 +266,12 @@ y_rest = y[percent:]
 # ======================================================
 
 import csv
+X_opt_for_orange = np.insert(X_opt_for_orange, len(features), y_opt, axis=1)
 with open("data/orange_opt.csv", "w+") as csvfile:
     datawriter = csv.writer(csvfile, delimiter=',',
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
     datawriter.writerow(features + ["Class"])
-    for row in X_opt:
+    for row in X_opt_for_orange:
         datawriter.writerow(row)
 
 
