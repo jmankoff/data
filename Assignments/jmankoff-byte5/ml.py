@@ -265,8 +265,7 @@ y_rest = y[percent:]
 # print out files for orange if you want to use that
 # ======================================================
 
-import csv
-X_opt_for_orange = np.insert(X_opt_for_orange, len(features), y_opt, axis=1)
+X_opt_for_orange = np.insert(X_opt, len(features), y_opt, axis=1)
 with open("data/orange_opt.csv", "w+") as csvfile:
     datawriter = csv.writer(csvfile, delimiter=',',
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
