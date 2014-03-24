@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="stylesheets/d3.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <title>Data Pipeline Project Byte 6 -- Big Data</title>
+</head>
+ <body>
+   <h1>Data Pipeline Project Byte 6</h1>
+   <h2>Query Results</h2>
+   <ul>
+   {% for state in states %}
+      <li>{{state['state']}} : {{state['total']}}</li>
+   {% endfor %}
+
+ </body>
+</html>
