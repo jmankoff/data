@@ -253,7 +253,7 @@ Outcomes = ["Euth.", "Home", "Other"]
 # We'll use the first 20%. This is fine
 # to do because we know the data is randomized.
 nrows = len(all_data)
-percent = len(X)/20
+percent = len(X)/5
 X_opt = X[:percent, :]
 y_opt = y[:percent]
 
