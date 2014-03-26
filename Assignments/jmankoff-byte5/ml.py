@@ -312,7 +312,7 @@ X = le.transform(X)
 # Lastly we need to split these into a optimization set
 # using about 20% of the data
 nrows = len(all_data)
-percent = len(X)/20
+percent = len(X)/5
 
 # We'll use the first 20%. This is fine
 # to do because we know the data is randomized.
