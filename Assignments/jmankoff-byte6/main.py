@@ -28,7 +28,7 @@ import os
 from webapp2_extras import jinja2
 
 # BigQuery API Settings
-_PROJECT_NUMBER        = '756504729929' 
+_PROJECT_NUMBER        = '' 
 
 # Define your production Cloud SQL instance information. 
 _DATABASE_NAME = 'publicdata:samples.natality'
