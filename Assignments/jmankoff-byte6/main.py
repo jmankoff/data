@@ -48,7 +48,7 @@ service     = build("bigquery", "v2", http=http)
 logging.info("done setting up credentials")
 
 # You can change these features, but make sure they are all numerical
-features = ['drinks_per_week', 'born_alive_alive', 'born_alive_dead', 'child_race', 'ever_born', 'mother_race', 'father_race', 'year', 'father_age', 'mother_age', 'plurality', 'weight_gain_pounds', 'gestation_weeks']
+features = ['drinks_per_week', 'born_alive_alive', 'born_alive_dead', 'father_age', 'mother_age', 'plurality', 'weight_gain_pounds']
 # this is global so each time someone presses 'learn' it remembers what was already learned
         
 # we are adding a new class that will 
