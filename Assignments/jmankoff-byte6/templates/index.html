@@ -16,5 +16,11 @@
       <li>{{state['state']}} : {{state['total']}}</li>
    {% endfor %}
 
+   <ul>
+   {% for weight in weights %}
+      <li>{{weight['feature']}} : {{weight['weight']}}</li>
+   {% endfor %}
+   <li>accuracy : {{accuracy}}</li>
+
  </body>
 </html>
