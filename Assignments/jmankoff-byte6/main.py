@@ -35,8 +35,8 @@ _PROJECT_NUMBER        = ''
 _DATABASE_NAME = 'publicdata:samples.natality'
 
 # number of rows to request at a time (make this smaller when you are testing)
-_MAX_ROWS = 1000
-_TIMEOUT = 200000
+_MAX_ROWS = 80
+_TIMEOUT = 2000000
 
 # cutoff for apgar_1min
 _APGAR_CUTOFF = 7
@@ -98,8 +98,13 @@ class MainHandler(BaseHandler):
 
         # This is what you are predicting
         predict = 'apgar_1min'
-        zeros_string = "apgar_1min < {0}".format(_APGAR_CUTOFF) 
-        ones_string = "apgar_1min >= {0}".format(_APGAR_CUTOFF) 
+
+        # this gets data only from the TRAIN set (odd numbered rows) and for which 
+        # apgar_1min is small (one class we are predicting)
+        zeros_string = "row_number % 2 = 1 AND apgar_1min < {0}".format(_APGAR_CUTOFF)
+        # thes gits data only from the TRAIN set (odd numbered rows) and for which
+        # apgar_1min is large (the other class we are predicting)
+        ones_string = "row_number % 2 = 1 AND apgar_1min >= {0}".format(_APGAR_CUTOFF) 
 
         weights, regression_model = self.stochastic_gradient_descent(features, predict, self.apgar_1min_test, zeros_string, ones_string)
 
@@ -112,8 +117,9 @@ class MainHandler(BaseHandler):
         # -- it is a function.
 
         # testing_X is the data we will use to make predictions, labels are the ground truth
-        # (correct) y values
-        testing_X, labels = self.get_data(features, predict, self.apgar_1min_test)
+        # (correct) y values. The test makes sure we rae getting data for which the row numbers are
+        # even (this is the half of our data we will use for testing, odd numbers are reserved for training)
+        testing_X, labels = self.get_data(features, predict, self.apgar_1min_test, filter="row_number % 2 = 0", limit=100)
 
         # apply_model can apply any model (a model is just a function that can predict a value)
         # it returns an accuracy
@@ -127,15 +133,19 @@ class MainHandler(BaseHandler):
         features_weights = []
         for i in xrange(len(features)):
             features_weights.append({'feature' : features[i], 'weight' : weights[i]})
-        context = {"weights": features_weights, "accuracy": [regression_accuracy, zeror_accuracy], "states":states}
+        context = {"weights": features_weights, "accuracy": [regression_accuracy, zeror_accuracy]}
         self.render_response('index.html', context)
 
     # a helper function for retrieving data from the database and putting it into
-    # the right format for machine learning
-    def get_data(self, features, predict, prediction_test, test=None):
-        # need to retrieve data from bigquery to test on
-        query_string = self.make_query_string(features, predict, test)
-        logging.info(query_string)
+    # the right format for machine learning. The parameters for this function are
+    # features -- an array of features to retrieve from the database (column names)
+    # predict -- the column name of the item to be predicted
+    # prediction_test -- returns a class based on the value of the predict variable
+    # filter -- used to decide which rows should be included in this data retrieval
+    # limit -- the maximum number of rows to retrieve
+    def get_data(self, features, predict, prediction_test, filter=None, limit=_MAX_ROWS):
+        # need to retrieve data from bigquery 
+        query_string = self.make_query_string(features, predict, filter)
 
         # run the query and capture the results
         data = self.run_query(query_string)
@@ -151,10 +161,7 @@ class MainHandler(BaseHandler):
         for row in rows:
             instance = []
             prediction=row[u'f'][0][u'v']
-            if prediction_test(prediction):
-                labels.append(1.0)
-            else:
-                labels.append(0.0)
+            labels.append(prediction_test(prediction))
             for i in xrange(1,featureNum+1):
                 instance.append(float(row[u'f'][i][u'v']))
             data.append(instance)
@@ -164,32 +171,46 @@ class MainHandler(BaseHandler):
         # y are the labels -- the values we are predicting
         # np.array helps to make it possible to do very fast matrix arithmetic
         y = np.array(labels)
-        logging.info(y)
 
         # X are the features -- the values we use to make the prediction
         X = np.array(data)
 
         return X, y
 
-    # test is just an optional additional test that can be used for example to
-    # select only a subset of prediction values. This only works for numeric
-    # values. If you want to use non numeric values, you would have to pass in
-    # some sort of information about which are numeric and which are not, and
-    # then only put the !=99 stuff in for the numeric features.
-    def make_query_string(self, features, predict, test=None):
-        query_string = "SELECT " + predict 
+    # make_query_string makes a valid query string for Google BigQuery based
+    # on a given set of column names for features and prediction
+    # features -- an array of features to retrieve from the database (column names)
+    # predict -- the column name of the item to be predicted
+    # prediction_test -- returns a class based on the value of the predict variable
+    # filter -- used to decide which rows should be included in this data retrieval
+    # limit -- the maximum number of rows to retrieve
+    def make_query_string(self, features, predict, filter=None, limit=_MAX_ROWS):
+        columns_string = predict  
         checks = ""
+        
         for feature in features:
-            query_string = query_string + ", " + feature
+            columns_string = columns_string + ", " + feature
             checks = checks + feature + " IS NOT NULL AND " + feature + "!=99 AND "
-        checks = checks + predict + " IS NOT NULL AND " + predict + "!=99 "
-        if (test != None):
-            checks = checks + " AND " + test
-        query_string = query_string + " FROM [{0}] WHERE ".format(_DATABASE_NAME) + checks
+        checks = checks + predict + " IS NOT NULL AND " + predict + "!=99 " 
+
+        columns_string = columns_string 
+        
+        query_string = "SELECT *, rand() as ind FROM ( SELECT " + columns_string
+        query_string = query_string + ", ROW_NUMBER() OVER (ORDER BY year) AS row_number FROM "
+        query_string = query_string + _DATABASE_NAME + " WHERE " + checks  + ") "
+
+        if filter!=None:
+            query_string = query_string + " WHERE " + filter
+            
         query_string = query_string + " LIMIT {0}".format(_MAX_ROWS)
+
+        logging.info(query_string)
+        
         return query_string
 
-    # run the query specified in query_string, but if local returns an error
+    # run the query specified in query_string, or load a local file
+    # (you'll use that option potentially when debugging the first half
+    # of the assignment)
     def run_query(self, query_string, filename=None):
         # set up the query 
         query = {'query':query_string, 'timeoutMs':_TIMEOUT}
@@ -203,21 +224,25 @@ class MainHandler(BaseHandler):
             # defined in your app
             return jobCollection.query(projectId=_PROJECT_NUMBER,body=query).execute()
         else:
-            # open the data stored in a file called "data.json"
+            # open the data stored in a file called filename
             try:
                 fp = open(filename)
-                response = simplejson.load(fp)
-                # but if that file does not exist, download the data from fusiontables
-                return response
+                return simplejson.load(fp)
             except IOError:
-                logging.info("failed to load local file")
-
+                logging.info('cannot run locally')
+                return None
+            
     # This function has knowledge specific to the thing that is being predicted
     # on this data set. In this case, we are assuming that value is an apgar score
     # and that it should be converted to an int, and that less than 4 is different
     # than more than 4 (more than 4 is a positive outcome, less than 4 is a negative)
+    # It takes in a value and returns a class (in this case, either 0 or 1 since we
+    # are only doing a two class prediction problem)
     def apgar_1min_test(self, value):
-        return int(value)>=_APGAR_CUTOFF
+        if (int(value)>=_APGAR_CUTOFF):
+            return 1.0
+        else:
+            return 0.0
 
     # loss function for logistic regression
     # you shouldn't need to modify this. 
@@ -226,13 +251,15 @@ class MainHandler(BaseHandler):
 
     
     # basic logistic regression (used by stochastic_gradient_descent)
-    # features is the list of features (by name); weights are the weight (an empty array that will
-    # be filled in by this function. X is the array containing cases to predict from, labels
-    # are the ground truth y values. step is the rate controller for changing the weights.
-    # lam is the regularization parameter. Something
-    # you could play with on a large data set is what value to use for this.
-    # you would want to do that by picking an optimization set and trying lots of
-    # lam values (from 0 to 1) on that optimization set. 
+    # weights -- the list weight scurrently assigned to the features  (an empty array that will
+    #   be filled in by this function.
+    # X -- the array containing cases to predict from,
+    # labels -- the ground truth y values.
+    # step -- the rate controller for changing the weights.
+    # lam --  the regularization parameter. Something you could play with on a large data set is
+    #      what value to use for this. you would want to do that by picking an optimization set 
+    #      and trying lots of lam values (from 0 to 1) on that optimization set.
+    # iterations -- defaults to 1 for stochastic gradient descent, but can be higher in standard gradient descent. 
     def gradient_descent(self, weights, X, y_labels, step=0.1, lam=0.1, iterations=1):
         # this is the logistic regression implementation from slide 61
         m, n=X.shape
