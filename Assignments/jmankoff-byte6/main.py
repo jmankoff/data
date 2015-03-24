@@ -145,7 +145,7 @@ class MainHandler(BaseHandler):
     # limit -- the maximum number of rows to retrieve
     def get_data(self, features, predict, prediction_test, filter=None, limit=_MAX_ROWS):
         # need to retrieve data from bigquery 
-        query_string = self.make_query_string(features, predict, filter)
+        query_string = self.make_query_string(features, predict, filter, limit)
 
         # run the query and capture the results
         data = self.run_query(query_string)
