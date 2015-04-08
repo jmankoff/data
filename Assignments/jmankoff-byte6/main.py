@@ -202,7 +202,7 @@ class MainHandler(BaseHandler):
         if filter!=None:
             query_string = query_string + " WHERE " + filter
             
-        query_string = query_string + " LIMIT {0}".format(_MAX_ROWS)
+        query_string = query_string + " LIMIT {0}".format(limit)
 
         logging.info(query_string)
         
