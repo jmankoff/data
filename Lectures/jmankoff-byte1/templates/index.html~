@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="stylesheets/d3.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="d3/d3.v3.js"></script>
+  <script type="text/javascript" src="d3/d3.cloudlayout.js"></script>
+  <meta charset="UTF-8">
+<title>Byte 1 Tutoral</title>
+</head>
+<body>
+<h1>Data Pipeline Project Byte 1 Example</h1>
+<p>
+<form action="search" method="POST">
+  Search Term: <input name="search_term" value='{{search}}'><br>
+  <input type="submit" value="Enter Search Term">
+</form>
+</p>
+{% if search: %}
+<p>Searching for {{search}}</p>
+{% endif %}
+
+<b></b>
+<script>
+       // ----------- EVERY CHART NEEDS DATA --------------
+       // this is the data we passed from main.py
+       // the format for data is: 
+       // [{text: word, size: number},...]
+
+  var frequency_list = {{wordcloud|safe}};
+
+  var color = d3.scale.category20();
+  d3.layout.cloud().size([850, 300])
+            .words(frequency_list)
+            .timeInterval(10)
+            .font("Impact")
+            .padding(3)
+            .rotate(function() { return ~~(Math.random() * 2) * 90; })
+            .fontSize(function(d) { return d.size; })
+            .on("end", draw)
+            .start();
+
+    function draw(words) {
+        d3.select("b").append("svg")
+                .attr("width", 850)
+                .attr("height", 300)
+                .attr("class", "wordcloud")
+                .append("g")
+                   // without the transform, words
+                   // would get cutoff to the left and top, they would
+                   // appear outside of the SVG area
+                   .attr("transform", "translate(400,150)")
+                .selectAll("text")
+                   .data(words)
+                .enter().append("text")
+                   .style("font-size", function(d) { return d.size + "px"; })
+                   .style("fill", function(d, i) { return color(i); })
+                   .attr("transform", function(d) {
+                       return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                })
+                   .text(function(d) { return d.text; });
+    }
+
+</script>
+
+
+<div style="width: 40%;">
+    <div class="legend">
+        Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
+    </div>
+
+<h2>Feed Contents</h2>
+{% for item in feed %}
+<a href="{{ item.link }}">{{ item.title }}</a><br>
+{{item.description|safe}}
+<br>
+{% endfor %}
+
+</div>
+</body>
+</html>
