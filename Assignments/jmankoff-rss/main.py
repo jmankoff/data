@@ -24,10 +24,17 @@ def index():
     template = JINJA_ENVIRONMENT.get_template('templates/index.html')
     feed = feedparser.parse("http://www.bing.com/search?q=dog&format=rss")
 
+    # loop through the items in the feed to log them
     for item in feed[ "items" ]:
         logging.info(item)
+    # loop through the items in the feed again to collect them in a data
+    # object to pass to the index.html template
     data = [{"link":item.link, "title":item.title, "description":item.summary_detail} for item in feed["items"]]
+
+    # log the data for debugging purposes
     logging.info(data)
+
+    # render the web page with the data 
     return template.render(feed=data)
 
     
@@ -40,17 +47,20 @@ def about():
 def search():
     term = request.form["search_term"]
     logging.info(term)
-    # show the post with the given id, the id is an integer
+
     template = JINJA_ENVIRONMENT.get_template('templates/index.html')
+
+    # creating the bing search url and collecting the data from it
     url = "http://www.bing.com/search?q=" + term + "&format=rss"
     feed = feedparser.parse(url)
     logging.info(url)
+
+    # same as in '/'
     for item in feed[ "items" ]:
         logging.info(item)
     data = [{"link":item.link, "title":item.title, "description":item.summary_detail} for item in feed["items"]]
     logging.info(data)
     return template.render(feed=data)
-
 
 @app.errorhandler(404)
 def page_not_found(e):
