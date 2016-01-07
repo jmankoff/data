@@ -14,6 +14,9 @@ threadsafe: yes
 
 # Handlers define how to route requests to your application.
 handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
 - url: /js
   static_dir: js
   application_readable: true
