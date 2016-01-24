@@ -12,6 +12,7 @@ API_KEY = '... add your own ...'
 # This is the table id for the fusion table
 TABLE_ID = '... add your own ...'
 
+
 # open the data stored in a file called "data.json"
 try:
     fp = open("data.json")
@@ -151,10 +152,6 @@ for column_name, details in summary.iteritems():
 # latitude and longitude only. 
     
 latitude = summary['Latitude']
-
-# need to replace the "EMPTY" key with a numeric value for plotting
-latitude[0] = latitude['EMPTY']
-del latitude['EMPTY']
 
 latitude = dict((float(k), v) for k, v in latitude.iteritems())
 
