@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,20 +9,20 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
     <title>Explore Byte Tutorial</title>
-
+    
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/theme.css" rel="stylesheet">
+    <!-- Custom styles for this project -->
+    <link href="css/explore.css" rel="stylesheet">
   </head>
-
+  
   <body role="document">
-
-        <!-- Fixed navbar -->
+    
+    <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+      <div class="container" >
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -41,29 +40,129 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+    
     <div class="container theme-showcase" role="main">
-
+      
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Data Pipeline Project Exploratory Analysis Byte Example</h1>
         <p>This is the Exploratory Analysis Byte of the Data Pipeline class.</p>
       </div>
-
-<iframe width="500" height="300" scrolling="no" frameborder="no"
-	src="https://www.google.com/fusiontables/embedviz?q=select+col16%3E%3E0+from+1ymz3EtGdi4qKGMl5AxEFXtTlgk3tKi8iCpjTzvM&amp;viz=MAP&amp;h=false&amp;lat=38.071424981566125&amp;lng=-85.15232666015623&amp;t=1&amp;z=9&amp;l=col16%3E%3E0&amp;y=3&amp;tmplt=3&amp;hml=TWO_COL_LAT_LNG"></iframe>
-
+      
       <div class="page-header">
-
+	
       </div> <!-- /page-header -->
     </div> <!-- /container -->
-
+    
+    <div class="button-toolbar" role="toolbar" id="headers" name="headers">
+      {% for column in allheaders %}
+      <button type="button" class = "btn-space btn btn-info" id="{{column}}" onclick="updateTable('{{column}}')">{{column}}</button>
+      {% endfor %}
+    </div>
+    
+    <div id="animals"><table id="data" class="table table-striped table-hover">
+	<thead class ="thead-inverse">
+	  <tr id="cols">
+	  </tr>
+	</thead>
+	<tbody id="rows"> 
+	</tbody>
+    </table></div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/docs.min.js"></script>
-  </body>
+    <script>
+	function updateTable(str) {
+		console.log("in updateTable");
+		console.log(str);
+
+	    // error checking: ignore buttons that don't have a title!
+		if (str == "") {
+			return;
+		}
+
+	    // find the actual button in this document's HTML
+		button = document.getElementById(str);
+		// for debugging, write its name to the console
+		console.log(button.className);
+		// check if it is disabled (btn-info)
+		if (button.className.includes("btn-info")) {
+			// and enable it (btn-primary)
+			button.className = "btn btn-space btn-primary";
+		} else {
+			// otherwise disable it (btn-info)
+			button.className = "btn btn-space btn-info";
+		}
+
+		// now get all the buttons
+		buttons = document.getElementById("headers").children;
+		// and collect their names in cols
+		cols = [];
+		// loop through them
+		for (button in buttons) {
+			// grab the id (the name we need is there)
+			id = buttons[button].id;
+			// make sure it isn't null
+			if (buttons[button].id != null) {
+				// and that the button is selected 
+				var isPrimary = buttons[button].className.includes("btn-primary");
+				if (isPrimary && (cols.indexOf(id) == -1)) {
+					// if so, add it to our array
+					cols.push(id);
+				}
+			}
+		}
+					
+		$.ajax({
+			url: '/_update_table',
+			dataType: 'json',
+			contentType: 'application/json',
+			data: JSON.stringify({'cols' : cols}),
+			type: 'POST',
+			success: function (res, status) {
+				console.log("successrunning");
+				console.log(res["content"]);
+				console.log(res["headers"]);
+				var cols = res["headers"];
+				var rows = res["content"];
+
+				// get the table, columns and rows
+				table = document.getElementById("data");
+				headers = document.getElementById("cols");
+				body = document.getElementById("rows");
+
+				// delete current contents
+				headers.innerHTML='';
+				body.innerHTML = '';
+
+				// and put the new information in the table
+				for (col in cols) {
+					cell = document.createElement("th");
+					cell.innerHTML = cols[col];
+					headers.appendChild(cell);
+				}
+				for (row in rows) {
+					tr = document.createElement("tr");
+					for (item in rows[row]) {
+						td = document.createElement("td");
+						td.innerHTML = rows[row][item];
+						tr.appendChild(td);
+					}
+					body.appendChild(tr);
+				}
+			},
+			error: function(res, status) {
+				// On Error
+				alert('error');
+			}
+		});
+	}
+				
+				   
+				   
+</script>
+</body>
 </html>
