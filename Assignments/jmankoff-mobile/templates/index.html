@@ -35,7 +35,6 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="about">About This Data Set</a></li>
 	    <li><a href="quality">Data Quality</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -50,7 +49,17 @@
         <p>This is the Mobile Byte of the Data Pipeline class.</p>
       </div>
 
-      <div class="page-header">
+   <h2>Query Results</h2>
+   <ul>
+   {% for item in queries %}
+   <li>Query: {{item.query}}<br>
+       {% for row in item.results %}
+          {{row}}<br>
+       {% endfor %}
+   </li>
+   {% endfor %}
+
+   <div class="page-header">
 	<p> You should add information here, including some tables
 	and/or charts, telling the reader about the relationship
 	  between time and activity in your data.</p>
