@@ -1,5 +1,12 @@
 """`main` is the top level module for your Flask application."""
 
+# Data Exploration Byte Version 1
+# 
+# Copyright 1/2016 Jennifer Mankoff
+#
+# Licensed under GPL v3 (http://www.gnu.org/licenses/gpl.html)
+#
+
 # Imports
 import os
 import jinja2
