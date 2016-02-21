@@ -71,13 +71,14 @@ def index():
     # specify the outcomes we will search for
     outcomes = ['Adopted', 'Euthanized', 'Foster', 'Returned to Owner', 'Transferred to Rescue Group', 'Other']
     ages = ['<6mo', '6mo-1yr', '1yr-6yr', '>7yr', 'Unspecified']
-    
-    age_by_outcome = []
+
+    age_by_outcome = {}
     for age in ages:
-        res = {'Age': age}
+        outcome_vals = {'Age':age}
         for outcome in outcomes:
-            res[outcome] = 0
-        age_by_outcome = age_by_outcome + [res]
+            outcome_vals[outcome]= 0
+        age_by_outcome[age] = outcome_vals
+        
 
     # find the column id for ages
     ageid = columns.index(u'Age')
@@ -91,26 +92,17 @@ def index():
         age = age_mapping[row[ageid]]
         # get the outcome for the dog in that row
         outcome = row[outcomeid]
-        # if the age is a known value (good data) find
-        # out which of the items in our list it corresponds to
-        if age in ages: age_position = ages.index(age)
-        # otherwise we will store the data in the 'Other' age column
-        else: age_position = ages.index('Other')
-        
-        # if the outcome is a bad value, we call it 'Other' as well
+
+        if age not in ages: age = 'Unspecified'
         if outcome not in outcomes: outcome = 'Other'
         
-        # now get the current number of dogs with that outcome and age
-        outcomes_for_age = age_by_outcome[age_position]
-        # and increase it by one
-        outcomes_for_age[outcome] = outcomes_for_age[outcome] + 1
+        # now record what we found
+        age_by_outcome[age][outcome] += 1
 
-    logging.info(age_by_outcome)
+    logging.info(age_by_outcome.values())
     
     # add it to the context being passed to jinja
-    variables = {'data':age_by_outcome,
-                 'y_labels':outcomes,
-                 'x_labels':ages}
+    variables = {'data':age_by_outcome.values()}
     
     # and render the response
     template = JINJA_ENVIRONMENT.get_template('templates/index.html')
