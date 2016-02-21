@@ -99,10 +99,15 @@ def index():
         # now record what we found
         age_by_outcome[age][outcome] += 1
 
-    logging.info(age_by_outcome.values())
+    data = []
+    for age in ages:
+        logging.info("appending " + age)
+        logging.info(age_by_outcome[age])
+        data.append(age_by_outcome[age])
+    logging.info(data)
     
     # add it to the context being passed to jinja
-    variables = {'data':age_by_outcome.values()}
+    variables = {'data':data}
     
     # and render the response
     template = JINJA_ENVIRONMENT.get_template('templates/index.html')

@@ -75,8 +75,12 @@
     //	    {outcome1: amount1, ... , Age: '>7yr'}]
     var data = {{data|safe}};
     console.log(data);
+    // this is just a list of ages, constructed using javascript's map
+    // function to collect the age of each row of the data
     var ages = data.map(function (d) {return d.Age});
     console.log(age);
+    // this collects up the outcomes, simply looking at all the keys in the first
+    // row of data besides age.
     var outcomes = d3.keys(data[0]).filter(function(key) { return key !== "Age"; });
     console.log(outcomes);
 
@@ -98,7 +102,6 @@
 	   // and a y1 position (it's top). d[name] is the number of
 	   // dogs with 'name' as their outcome (for this age)
 		   res = {name: name,
-				  value: +d[name],
 				  y0: y0,
 				  y1: y0 + d[name]};
 	   // and we also have to update y0 for the next rectangle.
@@ -164,7 +167,7 @@
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
 	// and add a group that is inside the margins
-        .append("g")
+          .append("g")
           // this makes sure that everything we do inside this group is translated to margin coordinates
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
        // draw the x axis (D3 handles the details in '.call')
@@ -235,7 +238,7 @@
             .data(color.domain().slice().reverse())
        legend.enter().append("g")
             .attr("class", "legend")
-            .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+            .attr("transform", function(d, i) { return "translate(0," + i * 20  + ")"; });
 
        // fill it with 18 x 18 rectangles in the colors
        legend.append("rect")
