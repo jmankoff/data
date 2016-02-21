@@ -58,8 +58,7 @@
        <p><strong>Number of Animals:</strong></p>
        <p><span id="value">100</span></p>
     </div>
-    <div id="stacked"></div>
-    <div id="side"></div>
+    <div id="viz"></div>
 	
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -68,6 +67,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="d3/d3.v3.js"></script>
     <script>
+
     // ----------- EVERY CHART NEEDS DATA --------------
     // this is the data we passed from main.py
     // the format for data is: 
@@ -133,21 +133,9 @@
        var y_scale = d3.scale.linear()
               .rangeRound([height, 0]);       
 
-       // ----- FOR THE STACKED BAR CHART ----------
        // this specifies the domain of the y axis (0 to the height of
        // the tallest bar), which is linear 
         y_scale.domain([0, d3.max(data, function(d) { return d.total; })]);
-
-      // ------------- FOR THE SIDE BY SIDE BAR CHART --------
-      var x1 = d3.scale.ordinal();
-      var y = d3.scale.linear().range([height, 0]);
-       x1.domain(outcomes).rangeRoundBands([0, x_scale0.rangeBand()]);
-       y.domain([0, d3.max(data, function(d) {
-		   return d3.max(d.outcomes,
-						 function(d) {
-							 return d.value; }); })]);
-
-	   // ------------ SAME FOR EITHER CHART ----------------
 
        // set up the color scale (there are 6 outcomes) 
        var color = d3.scale.ordinal()
@@ -171,7 +159,7 @@
        // ------- D3's DOM MANIPULATION MAGIC GOES HERE -------
 
        // the svg element is for drawing. 
-       var stacked = d3.select("#stacked").append("svg")
+       var svg = d3.select("#viz").append("svg")
           // note that we need to accound for margins 'by hand'
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
@@ -180,33 +168,13 @@
           // this makes sure that everything we do inside this group is translated to margin coordinates
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
        // draw the x axis (D3 handles the details in '.call')
-       stacked.append("g")
+       svg.append("g")
          .attr("class", "x axis")
          .attr("transform", "translate(0," + height + ")")
          .call(xAxis);
 
-	 var side = d3.select("#side").append("svg")
-		 .attr("width", width + margin.left + margin.right)
-		 .attr("height", height + margin.top + margin.bottom)
-	 .append("g")
-		 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-	var age = svg.selectAll(".Age")
-      .data(data)
-    .enter().append("g")
-      .attr("class", "age")
-      .attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; });
-	age.selectAll("rect")
-      .data(function(d) { return d.outcomes; })
-    .enter().append("rect")
-      .attr("width", x1.rangeBand())
-      .attr("x", function(d) { return x1(d.name); })
-      .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); })
-      .style("fill", function(d) { return color(d.name); });
-
-			 
        // draw the y axis (D3 handles the details in '.call')
-       stacked.append("g")
+       svg.append("g")
          .attr("class", "y axis")
          .call(yAxis)
        .append("text")
@@ -217,7 +185,7 @@
          .text("Number of Animals");
 
        // The selection '.age' will correspond to the data
-       var age = stacked.selectAll(".Age")
+       var age = svg.selectAll(".Age")
            // this joins the data to the selected elements
            .data(data)
          // the call to enter() actually creates the elements (one group per bar) and binds it to the data
@@ -262,7 +230,7 @@
 
        // create a legend with a 20 pixel high separation between
        // items (one item per color in the scale)
-       var legend = stacked.selectAll(".legend")
+       var legend = svg.selectAll(".legend")
             // our data is the array of colors we created earlier
             .data(color.domain().slice().reverse())
        legend.enter().append("g")
