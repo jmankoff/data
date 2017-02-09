@@ -17,6 +17,19 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/theme.css" rel="stylesheet">
+    
+    <!-- Vega-lite visualization libraries -->
+    <script src="//d3js.org/d3.v3.min.js"></script>
+  	<script src="//vega.github.io/vega/vega.js"></script>
+  	<script src="//vega.github.io/vega-lite/vega-lite.js"></script>
+  	<script src="//vega.github.io/vega-editor/vendor/vega-embed.js" charset="utf-8"></script>
+    
+    <style media="screen">
+	    /* Add space between vega-embed links  */
+	    .vega-actions a {
+	      margin-right: 5px;
+	    }
+	  </style>
   </head>
 
   <body role="document">
@@ -34,8 +47,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-	    <li><a href="quality">Data Quality</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about">About This Data Set</a></li>
+            <li><a href="/quality">Data Quality</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -58,17 +72,65 @@
        {% endfor %}
    </li>
    {% endfor %}
+   </ul>
+   
+   <h2>Vega-lite Chart</h2>
+   
+   <!-- Example of Vega-lite graph -->
+   <div id="vis"></div>
+   <!-- Vega-lite graphing code. -->
+   <script>
+	  // Assign the specification to a local variable vlSpec.
+	  var vlSpec = {
+	    "data": {
+	      "values": [
+			{% for row in queries[0].results %}
+          		{"date": "{{row[0]}}", "count": {{row[1]}}},
+       		{% endfor %}
+	      ]
+	    },
+	    "mark": "bar",
+	    "encoding": {
+	      "x": {
+	      	"field": "date", "type": "nominal",
+		    "axis": {
+		        "title": "Date"
+		     }},
+	      "y": {
+	        "field": "count", "type": "quantitative",
+	        "axis": {
+	          "title": "Record Count"
+	        }
+	      }
+	    }
+	  };
+	
+	  var embedSpec = {
+	    mode: "vega-lite",  // Instruct Vega-Embed to use the Vega-Lite compiler
+	    spec: vlSpec
+	    // You can add more vega-embed configuration properties here.
+	    // See https://github.com/vega/vega/wiki/Embed-Vega-Web-Components#configuration-propeties for more information.
+	  };
+	
+	  // Embed the visualization in the container with id `vis`
+	  vg.embed("#vis", embedSpec, function(error, result) {
+	    // Callback receiving the View instance and parsed Vega spec
+	    // result.view is the View, which resides under the '#vis' element
+	  });
+  </script>
 
    <div class="page-header">
-	<p> You should add information here, including some tables
-	and/or charts, telling the reader about the relationship
-	  between time and activity in your data.</p>
-
-	<p> You should also add information here, including some tables
-	and/or charts, telling the reader about the relationship
-	between time and location in your data.</p>
-      </div> <!-- /page-header -->
-    </div> <!-- /container -->
+		<p> You should add information here, including some tables
+		and/or charts, telling the reader about the relationship
+		  between time and activity in your data.</p>
+	
+		<p> You should also add information here, including some tables
+		and/or charts, telling the reader about the relationship
+		between time and location in your data.</p>
+		
+		
+    </div> <!-- /page-header -->
+   </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
